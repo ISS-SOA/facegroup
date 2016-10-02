@@ -1,40 +1,26 @@
 # frozen_string_literal: true
-require 'http'
+require_relative 'fb_api'
 require_relative 'posting'
 
 module FaceGroup
   # Main class to setup a Facebook group
   class Group
-    attr_reader :access_token, :name
+    attr_reader :name
 
-    def initialize(client_id:, client_secret:, group_id:)
-      # Initialize API connection by getting access_token
-      #  require client_id and client_secret
-      access_token_response =
-        HTTP.get('https://graph.facebook.com/oauth/access_token',
-                 params: { client_id: client_id,
-                           client_secret: client_secret,
-                           grant_type: 'client_credentials' })
-      @access_token = access_token_response.body.to_s.split('=').last
-
-      # Find desired group:
-      #  requires group_id: use 3rd party site or parse FB group page (problem)
-      group_response = HTTP.get("https://graph.facebook.com/v2.7/#{group_id}",
-                                params: { access_token: @access_token })
-      group = JSON.load(group_response.to_s)
+    def initialize(fb_api, group_id:)
+      @fb_api = fb_api
+      group = @fb_api.group_info(group_id)
       @name = group['name']
       @id = group['id']
     end
 
     def feed
       return @feed if @feed
-
-      feed_response = HTTP.get("https://graph.facebook.com/v2.7/#{@id}/feed",
-                               params: { access_token: @access_token })
-      raw_feed = JSON.load(feed_response.to_s)['data']
+      raw_feed = @fb_api.group_feed(@id)
       @feed = raw_feed.map do |p|
         FaceGroup::Posting.new(
-          @access_token, p['id'], p['message'], p['updated_time']
+          @fb_api,
+          id: p['id'], message: p['message'], updated_at: p['updated_time']
         )
       end
     end

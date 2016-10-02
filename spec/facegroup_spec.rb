@@ -10,10 +10,16 @@ FB_RESPONSE = YAML.load(File.read('spec/fixtures/fb_response.yml'))
 RESULTS = YAML.load(File.read('spec/fixtures/results.yml'))
 
 describe 'FaceGroup specifications' do
+  before do
+    @fb_api = FaceGroup::FbApi.new(
+      client_id: CREDENTIALS[:client_id],
+      client_secret: CREDENTIALS[:client_secret]
+    )
+  end
+
   it 'should be able to open a Facebook Group' do
     group = FaceGroup::Group.new(
-      client_id: CREDENTIALS[:client_id],
-      client_secret: CREDENTIALS[:client_secret],
+      @fb_api,
       group_id: CREDENTIALS[:group_id]
     )
 
@@ -22,8 +28,7 @@ describe 'FaceGroup specifications' do
 
   it 'should get the latest feed from an group' do
     group = FaceGroup::Group.new(
-      client_id: CREDENTIALS[:client_id],
-      client_secret: CREDENTIALS[:client_secret],
+      @fb_api,
       group_id: CREDENTIALS[:group_id]
     )
 
@@ -33,9 +38,7 @@ describe 'FaceGroup specifications' do
 
   it 'should get information about postings on the feed' do
     group = FaceGroup::Group.new(
-      client_id: CREDENTIALS[:client_id],
-      client_secret: CREDENTIALS[:client_secret],
-      group_id: CREDENTIALS[:group_id]
+      @fb_api, group_id: CREDENTIALS[:group_id]
     )
 
     posting = group.feed.first
@@ -44,9 +47,7 @@ describe 'FaceGroup specifications' do
 
   it 'should find attachments in postings' do
     group = FaceGroup::Group.new(
-      client_id: CREDENTIALS[:client_id],
-      client_secret: CREDENTIALS[:client_secret],
-      group_id: CREDENTIALS[:group_id]
+      @fb_api, group_id: CREDENTIALS[:group_id]
     )
 
     posting = group.feed.first
