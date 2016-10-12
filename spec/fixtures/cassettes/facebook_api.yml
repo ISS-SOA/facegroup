@@ -1,0 +1,333 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.8/oauth/access_token?client_id=<CLIENT_ID>&client_secret=<CLIENT_SECRET>&grant_type=client_credentials
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.8
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - DNSQFnusepW
+      X-Fb-Rev:
+      - '2624182'
+      X-Fb-Debug:
+      - xCQnhgN7DRJuGWQTrvI58VcwZ2I4dJM4JKO2j0p8gORxuQUrzCNfeRwz4qD3+rWmgi548LtuT23fOMs/p9PcSw==
+      Date:
+      - Sat, 15 Oct 2016 08:11:07 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '85'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<ACCESS_TOKEN>","token_type":"bearer"}'
+    http_version: 
+  recorded_at: Sat, 15 Oct 2016 08:11:07 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.8/150352985174571?access_token=<ACCESS_TOKEN_ESCAPED>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - '"76e28f8b21d98678b988003cd44891a91248bbf3"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.8
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      X-Fb-Trace-Id:
+      - FYxa2kcDtvs
+      X-Fb-Rev:
+      - '2624182'
+      X-Fb-Debug:
+      - o2m3VZ3b6hJGr8+1/X6l5L1CdPjvhAVzN1Lym42TOFwr16QIBX99PTRaoiJsdlV7gxIA2ao+Ryc4QHzBjSU1mw==
+      Date:
+      - Sat, 15 Oct 2016 08:11:08 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '86'
+    body:
+      encoding: UTF-8
+      string: '{"name":"Web Service Development \u0040 NTHU","privacy":"OPEN","id":"150352985174571"}'
+    http_version: 
+  recorded_at: Sat, 15 Oct 2016 08:11:08 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.8/150352985174571/feed?access_token=<ACCESS_TOKEN_ESCAPED>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - '"1a5dc333a1b0bc125962f11bb72cd1fef5fbda70"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.8
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      X-Fb-Trace-Id:
+      - GTSZ+lvTCIY
+      X-Fb-Rev:
+      - '2624182'
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - KtfSQkfk8kpJ7kzRdHvfWIKcLcr5IKTE3KRHyZmC5JmJ7nZhHj8i1EgOmwcp6dbSOqyBml7oADQAWSz3DkktVQ==
+      Date:
+      - Sat, 15 Oct 2016 08:11:08 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"message":"https:\/\/m.facebook.com\/story.php?story_fbid=1098448240203391&id=100001146751327","updated_time":"2016-10-13T18:17:23+0000","id":"150352985174571_521137638096102"},{"updated_time":"2016-10-06T08:39:47+0000","id":"150352985174571_518029841740215"},{"message":"A
+        little quiz to keep you sharp on programming trends.","updated_time":"2016-10-06T06:51:44+0000","id":"150352985174571_517105121832687"},{"updated_time":"2016-10-06T01:18:12+0000","id":"150352985174571_517701838439682"},{"message":"Up
+        and coming languages worth keeping our eyes on.  I''m already a huge fan of
+        Crystal and Rust, but the author has convinced me to pay more attention to
+        Kotlin and Elm.","updated_time":"2016-09-22T08:12:35+0000","id":"150352985174571_511894255687107"},{"message":"I
+        can''t even wrap my head around all the new features Github just released:
+        code reviews, kanban boards, and much more.","updated_time":"2016-09-19T09:14:51+0000","id":"150352985174571_509461352597064"},{"message":"http:\/\/vertx.io\/","updated_time":"2016-09-13T20:34:39+0000","id":"150352985174571_508953969314469"},{"story":"\u96f7\u677e\u4e9e
+        shared Codecademy''s photo to the group: Web Service Development \u0040 NTHU.","updated_time":"2016-09-13T02:04:20+0000","id":"150352985174571_508631766013356"},{"message":"https:\/\/medium.com\/\u0040ajordens\/scaling-spinnaker-at-netflix-part-1-8a5ae51ee6de#.fubo771g2","updated_time":"2016-09-11T09:14:53+0000","id":"150352985174571_507894159420450"},{"message":"Why
+        (and when) we need architecture.","updated_time":"2016-09-08T03:33:06+0000","id":"150352985174571_390601061149761"},{"updated_time":"2016-09-03T06:33:51+0000","id":"150352985174571_504539303089269"},{"message":"https:\/\/dev.to\/ben\/the-targetblank-vulnerability-by-example","updated_time":"2016-09-02T17:50:31+0000","id":"150352985174571_503746883168511"},{"message":"just
+        discovered this .... looks nice","updated_time":"2016-08-26T02:34:28+0000","id":"150352985174571_500972406779292"},{"message":"No
+        reason not to use https for your web services: apart from the good old https:\/\/www.startssl.com,
+        now we have https:\/\/letsencrypt.org which makes getting, installing and
+        keeping a cert up to date easier. Plus its backed by many big guns and its
+        FREE! Here is the wikipedia article about it: https:\/\/en.m.wikipedia.org\/wiki\/Let\u002527s_Encrypt.
+        Just remember its pretty new and do read about how the certs are signed and
+        accepted by browser\/clients.","updated_time":"2016-08-22T00:55:29+0000","id":"150352985174571_499005640309302"},{"message":"A
+        speedier web? Yes thank you!\n\n","updated_time":"2016-08-02T04:40:01+0000","id":"150352985174571_491254161084450"},{"message":"https:\/\/blog.axosoft.com\/2016\/07\/28\/introducing-gitkraken-pro\/","updated_time":"2016-07-30T17:51:41+0000","id":"150352985174571_490544944488705"},{"message":"For
+        those using React, although optional webpack loaders (such as sass) still
+        need to be added!","updated_time":"2016-07-23T10:41:04+0000","id":"150352985174571_487752758101257"},{"message":"Test
+        scenarios that anyone can make sense of","updated_time":"2016-07-22T11:46:59+0000","id":"150352985174571_487315358144997"},{"message":"Check
+        out: https:\/\/www.websequencediagrams.com \u2014 fun and friendly way to
+        create sequence diagrams for web and mobile activities. I usually end up drawing
+        these on paper or on the board.  I think it will be quite engaging to play
+        with this live!","updated_time":"2016-07-21T02:25:49+0000","id":"150352985174571_486566974886502"},{"message":"http:\/\/venturebeat.com\/2016\/07\/14\/dropbox-open-sources-lepton-a-compression-algorithm-that-cuts-jpeg-file-size-by-22\/","updated_time":"2016-07-15T05:52:51+0000","id":"150352985174571_484513371758529"},{"message":"\"Serverless\"
+        is the new sensation in service architecture, and it integrates the recent
+        trends of microservices and reactive (message-driven) architectures. We will
+        play with some of these concepts in our SOA class this coming semester. Take
+        a peek at what''s brewing.\nhttp:\/\/martinfowler.com\/articles\/serverless.html","updated_time":"2016-07-14T19:01:17+0000","id":"150352985174571_484366188439914"},{"message":"I''m
+        shocked at how Pok\u00e9mon Go is taking over our streets (very soon in TW,
+        right?).  And now its having a major effect on local businesses as well. Great
+        example of how an online service can transform offline ones.","updated_time":"2016-07-13T09:36:32+0000","id":"150352985174571_483847351825131"},{"message":"The
+        syllabus for next semester''s \"Service Oriented Architecture\" class is now
+        online!  Take a look and share it with your coder friends who are dreaming
+        of their first startup :)","updated_time":"2016-07-04T11:18:26+0000","id":"150352985174571_480686308807902"},{"message":"A
+        plucky little online startup is changing how we address and locate geographic
+        places. The story below shows how countries and international organizations
+        are adopting this method. Take a look at https:\/\/what3words.com to find
+        your own three words :)","updated_time":"2016-06-26T05:04:58+0000","id":"150352985174571_474135702796296"},{"message":"https:\/\/techcrunch.com\/2016\/06\/23\/snyk\/","updated_time":"2016-06-26T05:03:51+0000","id":"150352985174571_477833252426541"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.8\/150352985174571\/feed?icon_size=16&since=1476382643&access_token=<ACCESS_TOKEN>&limit=25&__paging_token=enc_AdCAVCA72A4gv2MKtiGxlkAQQD47hptHvqfyKNtuyGf6xVrmONyoH0kpU1Ecc5PRcZC6CqtshBSDiO9k4J03TyPaDaDKO2jnA7ZBAkslx2zOQR9QZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.8\/150352985174571\/feed?icon_size=16&access_token=<ACCESS_TOKEN>&limit=25&until=1466917431&__paging_token=enc_AdBQX2PqbWNNP82doMrGi5JZCQyd5LdLTfrzYGxWtRwKj68dCJBsLcfArMfAh6pZALxBOvZBlZClvAOUqTa87yPK3fM8pdsm1qmjN9KxUuY2ZBsLZB9AZDZD"}}'
+    http_version: 
+  recorded_at: Sat, 15 Oct 2016 08:11:08 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.8/150352985174571_517105121832687?access_token=<ACCESS_TOKEN_ESCAPED>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - '"13fa446026c0d1f3004c5006d2d3745a9cddf84b"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.8
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      X-Fb-Trace-Id:
+      - FTKs/fEQJOA
+      X-Fb-Rev:
+      - '2624182'
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - ss8ZMvoYDTOn2BeYv2NTAs3iB0uEWrH7NgLfYp96qtwHDT5lJ64bakOy+qva2RNop0y7iY7GdP9UlmEUFadatQ==
+      Date:
+      - Sat, 15 Oct 2016 08:11:08 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"created_time":"2016-10-04T02:21:25+0000","message":"A little quiz
+        to keep you sharp on programming trends.","id":"150352985174571_517105121832687"}'
+    http_version: 
+  recorded_at: Sat, 15 Oct 2016 08:11:08 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.8/150352985174571_517105121832687/attachments?access_token=<ACCESS_TOKEN_ESCAPED>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - '"c81e330b42232937fc1d109ec71c1c2dc0261a82"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.8
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      X-Fb-Trace-Id:
+      - GYt2CvD28g7
+      X-Fb-Rev:
+      - '2624182'
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - F0mR3xdcGRbY80mg1YusbtAgcxICXpY195BNVNS+oPkJWbwOl7xuTfzhFCnKaL58P1aHMe9NYLT73JjGYnCrhQ==
+      Date:
+      - Sat, 15 Oct 2016 08:11:09 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"description":"Can you tell Java from JavaScript? Awesome!
+        So you are ready to take our ultimate programming challenge.","media":{"image":{"height":490,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB9saA-D40lNQqm&w=720&h=720&url=http\u00253A\u00252F\u00252Fcdn.tutorialzine.com\u00252Fwp-content\u00252Fuploads\u00252F2014\u00252F06\u00252Fguess-the-programming-language.jpg&cfs=1","width":490}},"target":{"url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=4AQHmCklC&s=1&enc=AZOD3Od2mEgxXjzGh8xlFCm6no5PMJ7ylvi7s4IP4EgcIaJzcXkIydShF-X84AEylBbye-aCcX_2LhGo5BKriXUY"},"title":"Guess
+        the Programming Language | Tutorialzine","type":"share","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=4AQHmCklC&s=1&enc=AZOD3Od2mEgxXjzGh8xlFCm6no5PMJ7ylvi7s4IP4EgcIaJzcXkIydShF-X84AEylBbye-aCcX_2LhGo5BKriXUY"}]}'
+    http_version: 
+  recorded_at: Sat, 15 Oct 2016 08:11:09 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/v2.8/oauth/access_token?client_id=<CLIENT_ID>&client_secret=<CLIENT_SECRET>&grant_type=client_credentials
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.8
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Fb-Trace-Id:
+      - DecjOA0ukEk
+      X-Fb-Rev:
+      - '2624182'
+      X-Fb-Debug:
+      - jjDYZ2feXgJzAi5fVswX8jbqGOGDv/IaAV7ynP1j+uX1BUOggpcTzZvh8nsQBeOQdHvUfyGHx/yP3HL4jhu3vQ==
+      Date:
+      - Sat, 15 Oct 2016 08:11:09 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '85'
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<ACCESS_TOKEN>","token_type":"bearer"}'
+    http_version: 
+  recorded_at: Sat, 15 Oct 2016 08:11:09 GMT
+recorded_with: VCR 3.0.3
