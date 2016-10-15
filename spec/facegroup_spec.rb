@@ -1,11 +1,7 @@
 # frozen_string_literal: true
-require 'minitest/autorun'
-require 'minitest/rg'
-require 'vcr'
-require 'webmock'
-
 require_relative 'spec_helper.rb'
 
+require 'yaml'
 FB_RESULT = YAML.load(File.read(RESULT_FILE))
 
 describe 'FaceGroup specifications' do

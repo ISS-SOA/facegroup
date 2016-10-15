@@ -11,17 +11,13 @@ module FaceGroup
 
     attr_accessor :access_token
 
-    def initialize(client_id: nil, client_secret: nil, access_token: nil)
-      if access_token
-        @access_token = access_token
-      else
-        access_token_response =
-          HTTP.get(FB_TOKEN_URL,
-                   params: { client_id: client_id,
-                             client_secret: client_secret,
-                             grant_type: 'client_credentials' })
-        @access_token = JSON.load(access_token_response.to_s)['access_token']
-      end
+    def initialize(client_id: nil, client_secret: nil)
+      access_token_response =
+        HTTP.get(FB_TOKEN_URL,
+                 params: { client_id: client_id,
+                           client_secret: client_secret,
+                           grant_type: 'client_credentials' })
+      @access_token = JSON.load(access_token_response.to_s)['access_token']
     end
 
     def group_info(group_id)
