@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 require_relative 'spec_helper.rb'
 
-require 'yaml'
-FB_RESULT = YAML.load(File.read(RESULT_FILE))
-
 describe 'FaceGroup specifications' do
   VCR.configure do |c|
     c.cassette_library_dir = CASSETTES_FOLDER

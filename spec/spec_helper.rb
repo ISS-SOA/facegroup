@@ -2,6 +2,7 @@
 require 'simplecov'
 SimpleCov.start
 
+require 'yaml'
 require 'minitest/autorun'
 require 'minitest/rg'
 require 'vcr'
@@ -16,3 +17,4 @@ CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"
 CASSETTE_FILE = 'facebook_api'
 CREDENTIALS = YAML.load(File.read('config/credentials.yml'))
 RESULT_FILE = "#{FIXTURES_FOLDER}/fb_api_results.yml"
+FB_RESULT = YAML.load(File.read(RESULT_FILE))

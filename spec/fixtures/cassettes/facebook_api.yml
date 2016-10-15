@@ -31,13 +31,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Fb-Trace-Id:
-      - DrVG3SGJorO
+      - BwGgVr5Ks0w
       X-Fb-Rev:
       - '2624182'
       X-Fb-Debug:
-      - ZuANMmoJLuOp4J+YMVGMVHk+87FAKDsVmqH1CEHF94IkKTqMezW+XJKucymXKWLkkYumCT7nGpKKoOi6KWy/2g==
+      - Ix/Eb895PD2Fve+0v5hGKKx8xwLeGQbg0NQFWchZ59IBmM9MEC9KcKaVjzPJ2zStmrqBuyk6sL0/Wkb55ujl6w==
       Date:
-      - Sat, 15 Oct 2016 15:05:41 GMT
+      - Sun, 16 Oct 2016 11:39:24 GMT
       Connection:
       - close
       Content-Length:
@@ -46,7 +46,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"access_token":"<ACCESS_TOKEN>","token_type":"bearer"}'
     http_version: 
-  recorded_at: Sat, 15 Oct 2016 15:05:41 GMT
+  recorded_at: Sun, 16 Oct 2016 11:39:24 GMT
 - request:
     method: get
     uri: https://graph.facebook.com/v2.8/oauth/access_token?client_id=<CLIENT_ID>&client_secret=<CLIENT_SECRET>&grant_type=client_credentials
@@ -78,13 +78,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Fb-Trace-Id:
-      - DTnVERuTdLJ
+      - BXMODxfoBd7
       X-Fb-Rev:
       - '2624182'
       X-Fb-Debug:
-      - QJcAjoe/P2kVJ1R2lSEwlhvL8hd7euxFTDLeWJWMAz/Hd709BTh+1DX8CEOlOOJCOV788E6v5iOwuxdAJ+CncQ==
+      - yCt4BO+TnZAuGMuFKJVjgGjhqdKWcwFknckCo9QgLdUCjUSO/XqzZp+txImtKfF58bsGElwflDmrt+h0NsxphA==
       Date:
-      - Sat, 15 Oct 2016 15:05:41 GMT
+      - Sun, 16 Oct 2016 11:39:24 GMT
       Connection:
       - close
       Content-Length:
@@ -93,7 +93,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"access_token":"<ACCESS_TOKEN>","token_type":"bearer"}'
     http_version: 
-  recorded_at: Sat, 15 Oct 2016 15:05:42 GMT
+  recorded_at: Sun, 16 Oct 2016 11:39:24 GMT
 - request:
     method: get
     uri: https://graph.facebook.com/v2.8/150352985174571?access_token=<ACCESS_TOKEN_ESCAPED>
@@ -127,13 +127,13 @@ http_interactions:
       Content-Type:
       - text/javascript; charset=UTF-8
       X-Fb-Trace-Id:
-      - HmMzy2EFxv0
+      - F126nZRC1Lb
       X-Fb-Rev:
       - '2624182'
       X-Fb-Debug:
-      - W0VrxnFGg8jpncjSWFdD17sy+76GdfOvnzWU8N7dcYs9IDmSca9a3eab4nQ+y8ck08Gs50wvHHBv/tOYHnX9Vw==
+      - Uq1tcBrhBKGzKHCU2siV8J2X4VDtDU9ZoWKTO6VZr8JyU3NuT+YJSfBPrLwegWPgKgWhDrfWfOVh4JIrwQwNpw==
       Date:
-      - Sat, 15 Oct 2016 15:05:42 GMT
+      - Sun, 16 Oct 2016 11:39:24 GMT
       Connection:
       - close
       Content-Length:
@@ -142,7 +142,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"name":"Web Service Development \u0040 NTHU","privacy":"OPEN","id":"150352985174571"}'
     http_version: 
-  recorded_at: Sat, 15 Oct 2016 15:05:42 GMT
+  recorded_at: Sun, 16 Oct 2016 11:39:24 GMT
 - request:
     method: get
     uri: https://graph.facebook.com/v2.8/150352985174571/feed?access_token=<ACCESS_TOKEN_ESCAPED>
@@ -176,15 +176,15 @@ http_interactions:
       Content-Type:
       - text/javascript; charset=UTF-8
       X-Fb-Trace-Id:
-      - CrWRIkv7xEC
+      - Fg7tgqy71VP
       X-Fb-Rev:
       - '2624182'
       Vary:
       - Accept-Encoding
       X-Fb-Debug:
-      - gsh/Xh313CjS5c3ToiKel4S39t8XEgGgDi2iEyyJFNO/i3flihBkCGJYjyYHnLFCbzsSkKfgVkSmmj0Q9x3C7g==
+      - csOkxZiZczJaHXzKZVho54S5RrCLwUyTCuhmF8POKs9oNjNTeATPQP4ygvpVBCaj/iL0h1ArNduc1Rq9b5m8Tw==
       Date:
-      - Sat, 15 Oct 2016 15:05:42 GMT
+      - Sun, 16 Oct 2016 11:39:24 GMT
       Connection:
       - close
     body:
@@ -228,7 +228,7 @@ http_interactions:
         are adopting this method. Take a look at https:\/\/what3words.com to find
         your own three words :)","updated_time":"2016-06-26T05:04:58+0000","id":"150352985174571_474135702796296"},{"message":"https:\/\/techcrunch.com\/2016\/06\/23\/snyk\/","updated_time":"2016-06-26T05:03:51+0000","id":"150352985174571_477833252426541"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.8\/150352985174571\/feed?icon_size=16&since=1476382643&access_token=<ACCESS_TOKEN>&limit=25&__paging_token=enc_AdCAVCA72A4gv2MKtiGxlkAQQD47hptHvqfyKNtuyGf6xVrmONyoH0kpU1Ecc5PRcZC6CqtshBSDiO9k4J03TyPaDaDKO2jnA7ZBAkslx2zOQR9QZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.8\/150352985174571\/feed?icon_size=16&access_token=<ACCESS_TOKEN>&limit=25&until=1466917431&__paging_token=enc_AdBQX2PqbWNNP82doMrGi5JZCQyd5LdLTfrzYGxWtRwKj68dCJBsLcfArMfAh6pZALxBOvZBlZClvAOUqTa87yPK3fM8pdsm1qmjN9KxUuY2ZBsLZB9AZDZD"}}'
     http_version: 
-  recorded_at: Sat, 15 Oct 2016 15:05:42 GMT
+  recorded_at: Sun, 16 Oct 2016 11:39:25 GMT
 - request:
     method: get
     uri: https://graph.facebook.com/v2.8/150352985174571_517105121832687?access_token=<ACCESS_TOKEN_ESCAPED>
@@ -262,15 +262,15 @@ http_interactions:
       Content-Type:
       - text/javascript; charset=UTF-8
       X-Fb-Trace-Id:
-      - HogLR6PLaLA
+      - CquRT1Cw8sg
       X-Fb-Rev:
       - '2624182'
       Vary:
       - Accept-Encoding
       X-Fb-Debug:
-      - ioGSWoNPgDx5nVHXXKINEhUwwKSjkfJYncbwMrThNItXdbDOnHeRKx0cKryreLn+r1ZqmICYHTEWMb/NLxidQQ==
+      - ZDBf/Z0I7OyWFHOXyBPyqmv35lDZXJCa2pfk1cpbjT8qVjLCvciHdfFO4d1uU5OnR+SUA6Ie2sZlMOlpmaypXQ==
       Date:
-      - Sat, 15 Oct 2016 15:05:43 GMT
+      - Sun, 16 Oct 2016 11:39:25 GMT
       Connection:
       - close
     body:
@@ -278,7 +278,7 @@ http_interactions:
       string: '{"created_time":"2016-10-04T02:21:25+0000","message":"A little quiz
         to keep you sharp on programming trends.","id":"150352985174571_517105121832687"}'
     http_version: 
-  recorded_at: Sat, 15 Oct 2016 15:05:43 GMT
+  recorded_at: Sun, 16 Oct 2016 11:39:25 GMT
 - request:
     method: get
     uri: https://graph.facebook.com/v2.8/150352985174571_517105121832687/attachments?access_token=<ACCESS_TOKEN_ESCAPED>
@@ -300,7 +300,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - '"542089394fc4e1e01cf9251b8c4c7c3a146b82b0"'
+      - '"6433db3b7143d114ef7b2c77a1a39423c1e955bf"'
       Pragma:
       - no-cache
       Cache-Control:
@@ -312,22 +312,22 @@ http_interactions:
       Content-Type:
       - text/javascript; charset=UTF-8
       X-Fb-Trace-Id:
-      - BeDwUb4tauD
+      - CzenbBrmq70
       X-Fb-Rev:
       - '2624182'
       Vary:
       - Accept-Encoding
       X-Fb-Debug:
-      - uiM3wfCA7LlMttRDDbdZC/Llb96UCg6GD77uLqqBhDXkOD1wiDCEJAZOLg6qPZuHenKV4CkviYCoNTsn/270gQ==
+      - ti8xj0F5YRMG6uzb+TZimR4ikYdHVqndcwWcSHeFIozdqcCaE8WGhn+NEPAkGgLa57zmbqY0c3S/jtE75igCeg==
       Date:
-      - Sat, 15 Oct 2016 15:05:43 GMT
+      - Sun, 16 Oct 2016 11:39:25 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
       string: '{"data":[{"description":"Can you tell Java from JavaScript? Awesome!
-        So you are ready to take our ultimate programming challenge.","media":{"image":{"height":490,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB9saA-D40lNQqm&w=720&h=720&url=http\u00253A\u00252F\u00252Fcdn.tutorialzine.com\u00252Fwp-content\u00252Fuploads\u00252F2014\u00252F06\u00252Fguess-the-programming-language.jpg&cfs=1","width":490}},"target":{"url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=mAQEYB9vm&s=1&enc=AZPxcJa6VCF2YAAPZFOem7qUSlu-y7ZWSCdw0MxXAIaDr0M9L2A9bDcDpqLwS3EN5hRX2Jxy12v_FXkZzylino1t"},"title":"Guess
-        the Programming Language | Tutorialzine","type":"share","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=mAQEYB9vm&s=1&enc=AZPxcJa6VCF2YAAPZFOem7qUSlu-y7ZWSCdw0MxXAIaDr0M9L2A9bDcDpqLwS3EN5hRX2Jxy12v_FXkZzylino1t"}]}'
+        So you are ready to take our ultimate programming challenge.","media":{"image":{"height":490,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB9saA-D40lNQqm&w=720&h=720&url=http\u00253A\u00252F\u00252Fcdn.tutorialzine.com\u00252Fwp-content\u00252Fuploads\u00252F2014\u00252F06\u00252Fguess-the-programming-language.jpg&cfs=1","width":490}},"target":{"url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=6AQEcbl1s&s=1&enc=AZPKR91rpoI9Arr6NaNCa_PPUgr__8T7Y8-mhsLg-0KauKE2in7rrQingIeAhNjYLj7z0tCY-Oc0v3tXyvgAxuTD"},"title":"Guess
+        the Programming Language | Tutorialzine","type":"share","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=6AQEcbl1s&s=1&enc=AZPKR91rpoI9Arr6NaNCa_PPUgr__8T7Y8-mhsLg-0KauKE2in7rrQingIeAhNjYLj7z0tCY-Oc0v3tXyvgAxuTD"}]}'
     http_version: 
-  recorded_at: Sat, 15 Oct 2016 15:05:43 GMT
+  recorded_at: Sun, 16 Oct 2016 11:39:25 GMT
 recorded_with: VCR 3.0.3
