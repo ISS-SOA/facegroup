@@ -84,7 +84,7 @@ describe 'FaceGroup specifications' do
     retrieved.created_time.must_equal posting['created_time']
     retrieved.message.must_equal posting['message']
     retrieved.attachment.wont_be_nil
-    retrieved.attachment[:description].must_equal attachment['description']
-    retrieved.attachment[:url].must_match 'tutorialzine'
+    retrieved.attachment.description.must_equal attachment['description']
+    retrieved.attachment.url.must_match 'tutorialzine'
   end
 end
