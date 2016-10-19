@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 require_relative 'fb_api'
-require_relative 'posting'
+require_relative 'feed'
 
 module FaceGroup
   # Main class to setup a Facebook group
@@ -15,10 +15,10 @@ module FaceGroup
 
     def feed
       return @feed if @feed
-      raw_feed = @fb_api.group_feed(@id)
-      @feed = raw_feed.map do |posting|
-        FaceGroup::Posting.new(@fb_api, data: posting)
-      end
+      feed_data = @fb_api.group_feed(@id)
+      @feed = Feed.new(@fb_api,
+                       postings_data: feed_data['data'],
+                       paging_data: feed_data['paging'])
     end
 
     def self.find(fb_api, id:)

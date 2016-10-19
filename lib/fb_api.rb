@@ -25,7 +25,7 @@ module FaceGroup
         fb_resource_url(group_id) + '/feed',
         params: { access_token: @access_token }
       )
-      JSON.load(feed_response.to_s)['data']
+      JSON.load(feed_response.to_s)
     end
 
     def fb_resource(id)
