@@ -16,12 +16,6 @@ describe 'FaceGroup specifications' do
 
   before do
     VCR.insert_cassette CASSETTE_FILE, record: :new_episodes
-
-    @fb_api = FaceGroup::FbApi.new(
-      client_id: CREDENTIALS[:client_id],
-      client_secret: CREDENTIALS[:client_secret]
-    )
-
     @posting_with_msg_id = FB_RESULT['posting']['id']
   end
 
@@ -29,18 +23,20 @@ describe 'FaceGroup specifications' do
     VCR.eject_cassette
   end
 
-  it 'should be able to get a new access token' do
-    fb_api = FaceGroup::FbApi.new(
-      client_id: CREDENTIALS[:client_id],
-      client_secret: CREDENTIALS[:client_secret]
-    )
+  describe 'FbApi Credentials' do
+    it 'should be able to get a new access token with ENV credentials' do
+      FaceGroup::FbApi.access_token.length.must_be :>, 0
+    end
 
-    fb_api.access_token.length.must_be :>, 0
+    it 'should be able to get a new access token with file credentials' do
+      FaceGroup::FbApi.config = { client_id: CREDENTIALS[:client_id],
+                                  client_secret: CREDENTIALS[:client_secret] }
+      FaceGroup::FbApi.access_token.length.must_be :>, 0
+    end
   end
 
   it 'should be able to open a Facebook Group' do
     group = FaceGroup::Group.find(
-      @fb_api,
       id: CREDENTIALS[:group_id]
     )
 
@@ -49,7 +45,6 @@ describe 'FaceGroup specifications' do
 
   it 'should get the latest feed from an group' do
     group = FaceGroup::Group.find(
-      @fb_api,
       id: CREDENTIALS[:group_id]
     )
 
@@ -59,7 +54,7 @@ describe 'FaceGroup specifications' do
 
   it 'should get basic information about postings on the feed' do
     group = FaceGroup::Group.find(
-      @fb_api, id: CREDENTIALS[:group_id]
+      id: CREDENTIALS[:group_id]
     )
 
     group.feed.postings.each do |posting|
@@ -71,7 +66,7 @@ describe 'FaceGroup specifications' do
   it 'should find all parts of a full posting' do
     posting = FB_RESULT['posting']
     attachment = posting['attachment'].first
-    retrieved = FaceGroup::Posting.find(@fb_api, id: posting['id'])
+    retrieved = FaceGroup::Posting.find(id: posting['id'])
 
     retrieved.id.must_equal posting['id']
     retrieved.created_time.must_equal posting['created_time']

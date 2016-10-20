@@ -7,21 +7,20 @@ module FaceGroup
   class Posting
     attr_reader :id, :created_time, :updated_time, :message
 
-    def initialize(fb_api, data: nil)
-      @fb_api = fb_api
+    def initialize(data: nil)
       load_data(data)
     end
 
     def attachment
       return @attachment if @attachment
 
-      attached_data = @fb_api.posting_attachments(@id)
+      attached_data = FaceGroup::FbApi.posting_attachments(@id)
       @attachment = Attachment.new(attached_data)
     end
 
-    def self.find(fb_api, id:)
-      posting_data = fb_api.posting(id)
-      new(fb_api, data: posting_data)
+    def self.find(id:)
+      posting_data = FaceGroup::FbApi.posting(id)
+      new(data: posting_data)
     end
 
     private
