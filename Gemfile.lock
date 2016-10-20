@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    facegroup (0.1.0)
+      http (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,16 +74,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  flay
-  flog
-  http
-  minitest
-  minitest-rg
-  rake
-  rubocop
-  simplecov
-  vcr
-  webmock
+  facegroup!
+  flay (~> 2.8)
+  flog (~> 4.4)
+  minitest (~> 5.9)
+  minitest-rg (~> 5.2)
+  rake (~> 11.3)
+  rubocop (~> 0.42)
+  simplecov (~> 0.12)
+  vcr (~> 3.0)
+  webmock (~> 2.1)
 
 BUNDLED WITH
    1.13.5

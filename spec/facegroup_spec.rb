@@ -16,7 +16,6 @@ describe 'FaceGroup specifications' do
 
   before do
     VCR.insert_cassette CASSETTE_FILE, record: :new_episodes
-    @posting_with_msg_id = FB_RESULT['posting']['id']
   end
 
   after do
