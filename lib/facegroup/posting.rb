@@ -5,7 +5,7 @@ require_relative 'attachment'
 module FaceGroup
   # Single posting on group's feed
   class Posting
-    attr_reader :id, :created_time, :updated_time, :message
+    attr_reader :id, :created_time, :updated_time, :message, :name
 
     def initialize(data: nil)
       load_data(data)
@@ -29,6 +29,7 @@ module FaceGroup
       @id = posting_data['id']
       @updated_time = posting_data['updated_time']
       @created_time = posting_data['created_time']
+      @name = posting_data['message']
       @message = posting_data['message']
       attached = posting_data['attachment']
       @attachment = Attachment.new(attached) if attached

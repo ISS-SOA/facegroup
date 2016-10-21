@@ -10,6 +10,11 @@ module FaceGroup
     FB_TOKEN_URL = [FB_API_URL, 'oauth/access_token'].join('/')
     TOKEN_KEY = 'fbapi_access_token'
 
+    GRAPH_QUERY = {
+      feed: 'feed{name,message,updated_time,created_time,'\
+            'attachments{title,url,media}}'
+    }.freeze
+
     def self.access_token
       return @access_token if @access_token
 
@@ -22,30 +27,25 @@ module FaceGroup
     end
 
     def self.config=(credentials)
-      @config = {} unless @config
-      @config.update(credentials)
+      @config ? @config.update(credentials) : @config = credentials
     end
 
     def self.config
       return @config if @config
-      @config = { client_id: ENV['FB_CLIENT_ID'],
+      @config = { client_id:     ENV['FB_CLIENT_ID'],
                   client_secret: ENV['FB_CLIENT_SECRET'] }
     end
 
     def self.group_feed(group_id)
       feed_response = HTTP.get(
-        fb_resource_url(group_id) + '/feed',
-        params: { access_token: access_token }
+        fb_resource_url(group_id),
+        params: { fields: GRAPH_QUERY[:feed],
+                  access_token: @access_token }
       )
-      JSON.load(feed_response.to_s)
-    end
+      feed_data = JSON.load(feed_response.to_s)['feed']
 
-    def self.fb_resource(id)
-      response = HTTP.get(
-        fb_resource_url(id),
-        params: { access_token: access_token }
-      )
-      JSON.load(response.to_s)
+      { 'postings' => feed_data['data'],
+        'pagination' => feed_data['pagination'] }
     end
 
     def self.group_info(group_id)
@@ -68,6 +68,14 @@ module FaceGroup
 
     def self.fb_resource_url(id)
       URI.join(FB_API_URL, id.to_s).to_s
+    end
+
+    def self.fb_resource(id)
+      response = HTTP.get(
+        fb_resource_url(id),
+        params: { access_token: access_token }
+      )
+      JSON.load(response.to_s)
     end
   end
 end

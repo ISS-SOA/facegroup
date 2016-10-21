@@ -15,7 +15,7 @@ module FaceGroup
     def feed
       return @feed if @feed
       feed_data = FaceGroup::FbApi.group_feed(@id)
-      @feed = Feed.new(postings_data: feed_data['data'],
+      @feed = Feed.new(postings_data: feed_data['postings'],
                        paging_data: feed_data['paging'])
     end
 
