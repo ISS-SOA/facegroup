@@ -22,6 +22,7 @@ module FaceGroup
     end
 
     def self.config=(credentials)
+      @config = {} unless @config
       @config.update(credentials)
     end
 

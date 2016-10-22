@@ -6,12 +6,16 @@ describe 'FaceGroup specifications' do
     c.cassette_library_dir = CASSETTES_FOLDER
     c.hook_into :webmock
 
-    c.filter_sensitive_data('<ACCESS_TOKEN>') { CREDENTIALS[:access_token] }
-    c.filter_sensitive_data('<ACCESS_TOKEN_ESCAPED>') do
-      URI.escape(CREDENTIALS[:access_token])
+    c.filter_sensitive_data('<ACCESS_TOKEN>') do
+      URI.unescape(ENV['FB_ACCESS_TOKEN'])
     end
-    c.filter_sensitive_data('<CLIENT_ID>') { CREDENTIALS[:client_id] }
-    c.filter_sensitive_data('<CLIENT_SECRET>') { CREDENTIALS[:client_secret] }
+
+    c.filter_sensitive_data('<ACCESS_TOKEN_ESCAPED>') do
+      ENV['FB_ACCESS_TOKEN']
+    end
+
+    c.filter_sensitive_data('<CLIENT_ID>') { ENV['FB_CLIENT_ID'] }
+    c.filter_sensitive_data('<CLIENT_SECRET>') { ENV['FB_CLIENT_SECRET'] }
   end
 
   before do
@@ -28,15 +32,15 @@ describe 'FaceGroup specifications' do
     end
 
     it 'should be able to get a new access token with file credentials' do
-      FaceGroup::FbApi.config = { client_id: CREDENTIALS[:client_id],
-                                  client_secret: CREDENTIALS[:client_secret] }
+      FaceGroup::FbApi.config = { client_id: ENV['FB_CLIENT_ID'],
+                                  client_secret: ENV['FB_CLIENT_SECRET'] }
       FaceGroup::FbApi.access_token.length.must_be :>, 0
     end
   end
 
   it 'should be able to open a Facebook Group' do
     group = FaceGroup::Group.find(
-      id: CREDENTIALS[:group_id]
+      id: ENV['FB_GROUP_ID']
     )
 
     group.name.length.must_be :>, 0
@@ -44,7 +48,7 @@ describe 'FaceGroup specifications' do
 
   it 'should get the latest feed from an group' do
     group = FaceGroup::Group.find(
-      id: CREDENTIALS[:group_id]
+      id: ENV['FB_GROUP_ID']
     )
 
     feed = group.feed
@@ -53,7 +57,7 @@ describe 'FaceGroup specifications' do
 
   it 'should get basic information about postings on the feed' do
     group = FaceGroup::Group.find(
-      id: CREDENTIALS[:group_id]
+      id: ENV['FB_GROUP_ID']
     )
 
     group.feed.postings.each do |posting|

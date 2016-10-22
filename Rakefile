@@ -5,22 +5,15 @@ task default: :spec
 
 namespace :credentials do
   require 'yaml'
-  CREDENTIALS = YAML.load(File.read('config/credentials.yml'))
 
   desc 'generate access_token to STDOUT'
   task :get_access_token do
+    credentials = YAML.load(File.read('config/credentials.yml'))
     require_relative 'lib/facegroup/fb_api'
-    ENV['FBAPI_CLIENT_ID'] = CREDENTIALS[:client_id]
-    ENV['FBAPI_CLIENT_SECRET'] = CREDENTIALS[:client_secret]
+    ENV['FBAPI_CLIENT_ID'] = credentials[:client_id]
+    ENV['FBAPI_CLIENT_SECRET'] = credentials[:client_secret]
 
     puts "Access Token: #{FaceGroup::FbApi.access_token}"
-  end
-
-  desc 'Export sample credentials from file to bash'
-  task :export do
-    puts 'Please run the following in bash:'
-    puts "export FB_CLIENT_ID=#{CREDENTIALS[:client_id]}"
-    puts "export FB_CLIENT_SECRET=#{CREDENTIALS[:client_secret]}"
   end
 end
 
