@@ -1,5 +1,6 @@
 # FaceGroup Gem
 
+[![Gem Version](https://badge.fury.io/rb/facegroup.svg)](https://badge.fury.io/rb/facegroup)
 [![Build Status](https://travis-ci.org/ISS-SOA/facegroup.svg?branch=master)](https://travis-ci.org/ISS-SOA/facegroup)
 
 FaceGroup is a gem that specializes in getting data from public Facebook Groups.

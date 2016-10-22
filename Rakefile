@@ -15,6 +15,14 @@ namespace :credentials do
 
     puts "Access Token: #{FaceGroup::FbApi.access_token}"
   end
+
+  desc 'Export sample credentials from file to bash'
+  task :export do
+    credentials = YAML.load(File.read('config/credentials.yml'))
+    puts 'Please run the following in bash:'
+    puts "export FB_CLIENT_ID=#{credentials[:client_id]}"
+    puts "export FB_CLIENT_SECRET=#{credentials[:client_secret]}"
+  end
 end
 
 desc 'run tests'
