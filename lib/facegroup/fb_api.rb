@@ -11,8 +11,10 @@ module FaceGroup
     TOKEN_KEY = 'fbapi_access_token'
 
     GRAPH_QUERY = {
-      feed: 'feed{name,message,updated_time,created_time,'\
-            'attachments{title,url,media}}'
+      group:   'id,name,feed{name,message,updated_time,created_time,'\
+               'attachments{title,description,url,media}}',
+      posting: 'name,message,updated_time,created_time,'\
+               'attachments{title,description,url,media}'
     }.freeze
 
     def self.access_token
@@ -36,46 +38,27 @@ module FaceGroup
                   client_secret: ENV['FB_CLIENT_SECRET'] }
     end
 
-    def self.group_feed(group_id)
-      feed_response = HTTP.get(
-        fb_resource_url(group_id),
-        params: { fields: GRAPH_QUERY[:feed],
-                  access_token: @access_token }
+    def self.group_data(group_id)
+      graphql_query(group_id, :group)
+    end
+
+    def self.posting_data(posting_id)
+      graphql_query(posting_id, :posting)
+    end
+
+    def self.graphql_query(resource_id, resource_key)
+      response = HTTP.get(
+        fb_resource_url(resource_id),
+        params: { fields: GRAPH_QUERY[resource_key],
+                  access_token: access_token }
       )
-      feed_data = JSON.load(feed_response.to_s)['feed']
-
-      { 'postings' => feed_data['data'],
-        'pagination' => feed_data['pagination'] }
-    end
-
-    def self.group_info(group_id)
-      fb_resource(group_id)
-    end
-
-    def self.posting(posting_id)
-      fb_resource(posting_id)
-    end
-
-    def self.posting_attachments(posting_id)
-      attachments_response = HTTP.get(
-        fb_resource_url(posting_id) + '/attachments',
-        params: { access_token: access_token }
-      )
-      JSON.load(attachments_response.to_s)['data'].first
+      JSON.load(response.to_s)
     end
 
     private_class_method
 
     def self.fb_resource_url(id)
       URI.join(FB_API_URL, id.to_s).to_s
-    end
-
-    def self.fb_resource(id)
-      response = HTTP.get(
-        fb_resource_url(id),
-        params: { access_token: access_token }
-      )
-      JSON.load(response.to_s)
     end
   end
 end

@@ -3,12 +3,14 @@
 module FaceGroup
   # Attached URL to Posting
   class Attachment
-    attr_reader :description, :url
+    attr_reader :title, :description, :url
 
     def initialize(data)
       return unless data
-      @description = data['description']
-      @url = data['url']
+      attachment_data = data['data'].first
+      @title = attachment_data['title']
+      @description = attachment_data['description']
+      @url = attachment_data['url']
     end
   end
 end

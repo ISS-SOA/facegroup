@@ -5,23 +5,17 @@ require_relative 'feed'
 module FaceGroup
   # Main class to setup a Facebook group
   class Group
-    attr_reader :name
+    attr_reader :id, :name, :feed
 
-    def initialize(data:)
-      @name = data['name']
-      @id = data['id']
-    end
-
-    def feed
-      return @feed if @feed
-      feed_data = FaceGroup::FbApi.group_feed(@id)
-      @feed = Feed.new(postings_data: feed_data['postings'],
-                       paging_data: feed_data['paging'])
+    def initialize(group_data:)
+      @name = group_data['name']
+      @id = group_data['id']
+      @feed = Feed.new(feed_data: group_data['feed'])
     end
 
     def self.find(id:)
-      group_data = FbApi.group_info(id)
-      new(data: group_data)
+      group_data = FbApi.group_data(id)
+      new(group_data: group_data)
     end
   end
 end
