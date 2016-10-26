@@ -8,3 +8,6 @@ branches:
     - master
     - develop
 script: bundle exec rake spec
+addons:
+  code_climate:
+    repo_token: ed71eca87a57fbe52c3bc19c115312ba5112ff3406661f8700a4e4e06094311c

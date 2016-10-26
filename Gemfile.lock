@@ -9,6 +9,8 @@ GEM
   specs:
     addressable (2.4.0)
     ast (2.3.0)
+    codeclimate-test-reporter (0.6.0)
+      simplecov (>= 0.7.1, < 1.0.0)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     docile (1.1.5)
@@ -74,6 +76,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  codeclimate-test-reporter (~> 0.6)
   facegroup!
   flay (~> 2.8)
   flog (~> 4.4)
