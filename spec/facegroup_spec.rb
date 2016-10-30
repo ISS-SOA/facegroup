@@ -78,4 +78,9 @@ describe 'FaceGroup specifications' do
     retrieved.attachment.description.must_equal attachment['description']
     retrieved.attachment.url.must_match 'tutorialzine'
   end
+
+  it 'should run the executable file' do
+    output = FaceGroup::Runner.run!([ENV['FB_GROUP_ID']])
+    output.split("\n").length.must_be :>, 5
+  end
 end

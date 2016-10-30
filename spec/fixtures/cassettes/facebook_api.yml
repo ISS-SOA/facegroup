@@ -427,4 +427,55 @@ http_interactions:
         constants.stuffy.activism.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fqz.com\u00252F705273\u00252Fmongolia-is-changing-all-its-addresses-to-three-word-phrases\u00252F&h=JAQFMAksP&s=1&enc=AZN02PMmsYT-iK2B1lVh0qeNY7OGxEegLsCoQEytDDBIJgskc9gKuVUVI0SOHPwA5RbLYjALZVY9tHuLS0F0_86P","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBCzb8yBioJKKug&w=720&h=720&url=https\u00253A\u00252F\u00252Fqzprod.files.wordpress.com\u00252F2016\u00252F06\u00252Fjune-13-rtx12cmt-e1465820880769.jpg\u00253Fquality\u00253D80\u002526strip\u00253Dall\u002526w\u00253D1600&cfs=1","width":720}}}]}}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?fields=name,message,updated_time,created_time,attachments\u00257Btitle,description,url,media\u00257D&since=1476952146&access_token=<ACCESS_TOKEN>&limit=25&__paging_token=enc_AdDRT3FRqddWHdExcEnxBuffZCipxhESZBM93TZAL1VTlcfHQr3aWV1rq23kG3uiPxcZCwvQeCiZC8fEJvrhCQFCo6fyMk1u9HaT3EXZBICgj897coSwZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?fields=name,message,updated_time,created_time,attachments\u00257Btitle,description,url,media\u00257D&access_token=<ACCESS_TOKEN>&limit=25&until=1466917498&__paging_token=enc_AdBmZAsUzYqHLvymmCwfLv8K48KqrS6LGOHvgiJYkb7Brd7RrwyTZA8gMCDGPWYdza3XzU34YBZB7Xn0iN7WcT9cLhvOIFzhb8ZCDP8F35OnaNwZBtQZDZD"}}}'
     http_version: 
   recorded_at: Wed, 26 Oct 2016 16:55:01 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/1?access_token=<ACCESS_TOKEN_ESCAPED>&fields=id,name,feed%7Bname,message,updated_time,created_time,attachments%7Btitle,description,url,media%7D%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Www-Authenticate:
+      - 'OAuth "Facebook Platform" "not_found" "(#803) Some of the aliases you requested
+        do not exist: 1"'
+      Access-Control-Allow-Origin:
+      - "*"
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-store
+      Facebook-Api-Version:
+      - v2.6
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      X-Fb-Trace-Id:
+      - AGqrqQnTSPL
+      X-Fb-Rev:
+      - '2652207'
+      X-Fb-Debug:
+      - A/XhkwqFNTd7k4IulSk3nhSvx9O8hz+xkGWl1WczfxUq35DFTf1ziedwF0YdlzEB4D/LAnTfOf5/SCIZOe2vVw==
+      Date:
+      - Sun, 30 Oct 2016 15:57:05 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '142'
+    body:
+      encoding: UTF-8
+      string: '{"error":{"message":"(#803) Some of the aliases you requested do not
+        exist: 1","type":"OAuthException","code":803,"fbtrace_id":"AGqrqQnTSPL"}}'
+    http_version: 
+  recorded_at: Sun, 30 Oct 2016 15:57:07 GMT
 recorded_with: VCR 3.0.3
