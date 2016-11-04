@@ -27,3 +27,21 @@ end
 RESULT_FILE = "#{FIXTURES_FOLDER}/fb_api_results.yml"
 FB_RESULT = YAML.load(File.read(RESULT_FILE))
 INVALID_RESOURCE_ID = '_12345'
+
+VCR.configure do |c|
+  c.cassette_library_dir = CASSETTES_FOLDER
+  c.hook_into :webmock
+
+  c.filter_sensitive_data('<ACCESS_TOKEN>') do
+    URI.unescape(ENV['FB_ACCESS_TOKEN'])
+  end
+
+  c.filter_sensitive_data('<ACCESS_TOKEN_ESCAPED>') do
+    ENV['FB_ACCESS_TOKEN']
+  end
+
+  c.filter_sensitive_data('<CLIENT_ID>') { ENV['FB_CLIENT_ID'] }
+  c.filter_sensitive_data('<CLIENT_SECRET>') { ENV['FB_CLIENT_SECRET'] }
+
+  c.ignore_hosts 'codeclimate.com'
+end
