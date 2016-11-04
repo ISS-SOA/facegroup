@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    facegroup (0.2.1)
+    facegroup (0.2.2)
       http (~> 2.0)
 
 GEM
@@ -14,7 +14,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     docile (1.1.5)
-    domain_name (0.5.20160826)
+    domain_name (0.5.20161021)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     flay (2.8.1)

@@ -31,13 +31,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Fb-Trace-Id:
-      - CzywRdmh8MO
+      - HNH8sDb6eTA
       X-Fb-Rev:
-      - '2638327'
+      - '2663233'
       X-Fb-Debug:
-      - LFM+h3jZPwPzV568MfOMFbPDcP8VD14iXykwMwMqBOPCMUkTUyfcL97M7z3RGFWoBiGQPuDIVUEdJGfbOTgdbQ==
+      - DC7A1MosnpwngxCO7BC4Kgt0E0cjyYYoGHsGS++1uHG0B1u/RpvCD4St2ZfTLQwO/gOkiV+lZ2NDsfZ3tiTc6Q==
       Date:
-      - Sun, 23 Oct 2016 23:07:40 GMT
+      - Fri, 04 Nov 2016 05:50:42 GMT
       Connection:
       - close
       Content-Length:
@@ -46,10 +46,10 @@ http_interactions:
       encoding: UTF-8
       string: '{"access_token":"<ACCESS_TOKEN>","token_type":"bearer"}'
     http_version: 
-  recorded_at: Sun, 23 Oct 2016 23:07:41 GMT
+  recorded_at: Fri, 04 Nov 2016 05:50:43 GMT
 - request:
     method: get
-    uri: https://graph.facebook.com/150352985174571?access_token=<ACCESS_TOKEN_ESCAPED>&fields=id,name,feed%7Bname,message,updated_time,created_time,attachments%7Btitle,url,media%7D%7D
+    uri: https://graph.facebook.com/_12345?access_token=<ACCESS_TOKEN_ESCAPED>&fields=id,name,feed%7Bname,message,updated_time,created_time,attachments%7Btitle,description,url,media%7D%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -62,17 +62,18 @@ http_interactions:
       - http.rb/2.0.3
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
+      Www-Authenticate:
+      - 'OAuth "Facebook Platform" "not_found" "(#803) Some of the aliases you requested
+        do not exist: _12345"'
       Access-Control-Allow-Origin:
       - "*"
-      Etag:
-      - '"3636e806cf74b50ee220296d4f7f6f2aaac1691d"'
       Pragma:
       - no-cache
       Cache-Control:
-      - private, no-cache, no-store, must-revalidate
+      - no-store
       Facebook-Api-Version:
       - v2.6
       Expires:
@@ -80,162 +81,23 @@ http_interactions:
       Content-Type:
       - text/javascript; charset=UTF-8
       X-Fb-Trace-Id:
-      - EjcUSy3TrOQ
+      - AEc1EkYn2tt
       X-Fb-Rev:
-      - '2638327'
-      Vary:
-      - Accept-Encoding
+      - '2663233'
       X-Fb-Debug:
-      - FTxzBLzsbYHDrTIgOoJ4DLAErqYuyEGIHKHao0TcNB8/9+TelMIX4Uh7F1E1UhFcBg0uKS71I//EaYaV0f40kw==
+      - 77OsTl1/9jzF+wln2U2LhBsZeB3kHZqwX7O+IT9dVyUGqXQups5EWbUaCLAdGTB9DE5MWSwUInPHejNTmg/kBQ==
       Date:
-      - Sun, 23 Oct 2016 23:07:40 GMT
+      - Fri, 04 Nov 2016 05:50:43 GMT
       Connection:
       - close
+      Content-Length:
+      - '147'
     body:
       encoding: UTF-8
-      string: '{"id":"150352985174571","name":"Web Service Development \u0040 NTHU","feed":{"data":[{"name":"GitHub
-        Dumps REST Calls for Facebook''s GraphQL - The New Stack","message":"Github''s
-        adoption of GraphQL for APIs, over RESTful services, might be the tipping
-        point that makes GraphQL ubiquitous. From what little exposure I have to it
-        (thanks to YenTing and Yen-Nan at Cardinal Blue), it seems we are taking the
-        complexity and burden of APIs away from API consumers, and putting it squarely
-        at the feet of API providers. That means using APIs is about to become significantly
-        easier (albeit more deeply nested) for everyone!  But it also means that creating
-        APIs is about to become significantly harder. Read more about the big shift
-        at Github.","updated_time":"2016-10-20T08:29:06+0000","created_time":"2016-10-20T05:45:32+0000","id":"150352985174571_524070464469486","attachments":{"data":[{"title":"GitHub
-        Dumps REST Calls for Facebook''s GraphQL - The New Stack","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fthenewstack.io\u00252Fgithub-dumps-rest-graphql-api\u00252F&h=YAQHzMjoy&s=1&enc=AZMpf-S_2VYik6184ukcBdzjF-3PpyLReF5nW05P4Ayx8nbVzyShNMHp81bPli30OusK3C1qiW0BLXTxP_KOWY8r","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC5HLw3s46cLqn7&w=720&h=720&url=http\u00253A\u00252F\u00252Fthenewstack.io\u00252Fwp-content\u00252Fuploads\u00252F2016\u00252F09\u00252FGHU-GraphQL-Woah.jpg&cfs=1&sx=0&sy=0&sw=2448&sh=2448","width":720}}}]}},{"name":"Taking
-        PHP Seriously","message":"https:\/\/m.facebook.com\/story.php?story_fbid=1098448240203391&id=100001146751327","updated_time":"2016-10-13T18:17:23+0000","created_time":"2016-10-13T17:15:20+0000","id":"150352985174571_521137638096102","attachments":{"data":[{"title":"Taking
-        PHP Seriously","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fslack.engineering\u00252Ftaking-php-seriously-cf7a60065329\u002523.g3w9ecf66&h=sAQE7DLiZ&s=1&enc=AZOjStbZrdh2BTeov3xBLmrDmpSzHrOD1A7augRsyYWm01FXnKPbvMurc18wBo0f2-zE9GgPiW6UZDcJ0qzjKkRf","media":{"image":{"height":669,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCmbxAdG46sLBUD&w=720&h=720&url=https\u00253A\u00252F\u00252Fd262ilb51hltx0.cloudfront.net\u00252Fmax\u00252F1200\u00252F1\u00252Ax5N8tfTVEmQro2ySxoZtvw.jpeg&cfs=1","width":669}}}]}},{"name":"How
-        To Save The Princess In 8 Programming Languages","updated_time":"2016-10-06T08:39:47+0000","created_time":"2016-10-06T08:28:40+0000","id":"150352985174571_518029841740215","attachments":{"data":[{"title":"How
-        To Save The Princess In 8 Programming Languages","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Ftoggl.com\u00252Fprogramming-princess&h=xAQFOEieu&s=1&enc=AZOb6TELEoRkW6sKZBeOKyx2JjygU8WGx-WHsg0ieCovelJu2j5IrcipmzwNgC1WY22uf4PI6SOLRVW05FC6XQjq","media":{"image":{"height":630,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDEZQJwFjW82Fzm&w=720&h=720&url=https\u00253A\u00252F\u00252Ftoggl.com\u00252Fimages\u00252Fshare-img\u00252Ffb-share-git-princess.jpg&cfs=1","width":630}}}]}},{"name":"Guess
-        the Programming Language | Tutorialzine","message":"A little quiz to keep
-        you sharp on programming trends.","updated_time":"2016-10-06T06:51:44+0000","created_time":"2016-10-04T02:21:25+0000","id":"150352985174571_517105121832687","attachments":{"data":[{"title":"Guess
-        the Programming Language | Tutorialzine","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=_AQGXcqF0&s=1&enc=AZO8_k2mGlo63xRMItgRxcJ3KXSH1qFZTqEXwGb5AKfsDv8ffCzjTbLQtdVVaJg6KC5XNsmX8y0KweB1-SZOZbQ7","media":{"image":{"height":490,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB9saA-D40lNQqm&w=720&h=720&url=http\u00253A\u00252F\u00252Fcdn.tutorialzine.com\u00252Fwp-content\u00252Fuploads\u00252F2014\u00252F06\u00252Fguess-the-programming-language.jpg&cfs=1","width":490}}}]}},{"name":"How
-        it feels to learn JavaScript in 2016","updated_time":"2016-10-06T01:18:12+0000","created_time":"2016-10-05T13:47:43+0000","id":"150352985174571_517701838439682","attachments":{"data":[{"title":"How
-        it feels to learn JavaScript in 2016","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fhackernoon.com\u00252Fhow-it-feels-to-learn-javascript-in-2016-d3a717dd577f\u002523.m0lkkfan1&h=lAQF473Xt&s=1&enc=AZMeRE4HRGYgyXchdkhmzDEP8nbaKmeCttfJLL0m0qqUW3t0VSgo2H9qVZTki5Fykd8q8piqYmtbO1hftJ4OCeD-","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBw5xIxnMhHtpnj&w=720&h=720&url=https\u00253A\u00252F\u00252Fcdn-images-2.medium.com\u00252Fmax\u00252F1200\u00252F1\u00252AraWO3dhM4jMjf9VY-kZzNg.png&cfs=1","width":720}}}]}},{"name":"5
-        emerging programming languages with a bright future","message":"Up and coming
-        languages worth keeping our eyes on.  I''m already a huge fan of Crystal and
-        Rust, but the author has convinced me to pay more attention to Kotlin and
-        Elm.","updated_time":"2016-09-22T08:12:35+0000","created_time":"2016-09-21T10:13:58+0000","id":"150352985174571_511894255687107","attachments":{"data":[{"title":"5
-        emerging programming languages with a bright future","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftechbeacon.com\u00252F5-emerging-programming-languages-bright-future\u00253Futm_content\u00253Dbuffer300a1\u002526utm_medium\u00253Dsocial\u002526utm_source\u00253Dtwitter.com\u002526utm_campaign\u00253Dbuffer&h=7AQFqoF4w&s=1&enc=AZOcpN1TtkkxLsE26at9n3Pn2lm0mZimFB_Q8lu9uqVfNFM1oybLIFwc5QvyZ2hhsUGO1afi0O2ah7RCWv_dhtMO","media":{"image":{"height":480,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAxbtCPHht3vWb6&w=720&h=720&url=http\u00253A\u00252F\u00252Ftechbeacon.com\u00252Fsites\u00252Fdefault\u00252Ffiles\u00252Fstyles\u00252Fsocial\u00252Fpublic\u00252Ffield\u00252Fimage\u00252F5_emerging_programming_languages_with_a_bright_future.jpg\u00253Fitok\u00253Dm0nlEinF&cfs=1","width":480}}}]}},{"name":"A
-        whole new Universe","message":"I can''t even wrap my head around all the new
-        features Github just released: code reviews, kanban boards, and much more.","updated_time":"2016-09-19T09:14:51+0000","created_time":"2016-09-15T03:42:48+0000","id":"150352985174571_509461352597064","attachments":{"data":[{"title":"A
-        whole new Universe","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fgithub.com\u00252Funiverse-2016&h=CAQGu0989&s=1&enc=AZPWVEFbBeUjhIpGBCyYpb_-nztFQjF1X4iV0fky0Ny_VL5sCPlAqPdOFdUjucSRJbnu82OpAbwdQEque4I_dtbp","media":{"image":{"height":630,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBsb70KV75vMJ8B&w=720&h=720&url=https\u00253A\u00252F\u00252Fassets-cdn.github.com\u00252Fimages\u00252Fmodules\u00252Funiverse-2016\u00252Funiverse-open-graph.png&cfs=1","width":630}}}]}},{"name":"Vert.x","message":"http:\/\/vertx.io\/","updated_time":"2016-09-13T20:34:39+0000","created_time":"2016-09-13T20:34:39+0000","id":"150352985174571_508953969314469","attachments":{"data":[{"title":"Vert.x","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fvertx.io\u00252F&h=SAQEZza3C&s=1&enc=AZM9uG4L8irWmfzpetWja_hs5ozH7uTj3zZZUeTdgPVysOFrJVgq2uRubR2Y0UpP6qsk6_Httno9fGBrW8Xe5_YI","media":{"image":{"height":360,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC13D8UqDGMX5IF&w=720&h=720&url=http\u00253A\u00252F\u00252Fvertx.io\u00252Fassets\u00252Fuser_logos\u00252Fswisscom.png&cfs=1","width":360}}}]}},{"name":"Codecademy","updated_time":"2016-09-13T02:04:20+0000","created_time":"2016-09-13T02:04:20+0000","id":"150352985174571_508631766013356","attachments":{"data":[{"title":"Timeline
-        Photos","url":"https:\/\/www.facebook.com\/codecademy\/photos\/a.553205214692855.138303.272256069454439\/1387442691269099\/?type=3","media":{"image":{"height":377,"src":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/14264951_1387442691269099_7557697962736020966_n.png?oh=1c67604ccd5679d98c72100f943f3863&oe=5891713F","width":720}}}]}},{"name":"Scaling
-        Spinnaker at Netflix \u2014 The Basics","message":"https:\/\/medium.com\/\u0040ajordens\/scaling-spinnaker-at-netflix-part-1-8a5ae51ee6de#.fubo771g2","updated_time":"2016-09-11T09:14:53+0000","created_time":"2016-09-11T09:14:53+0000","id":"150352985174571_507894159420450","attachments":{"data":[{"title":"Scaling
-        Spinnaker at Netflix \u2014 The Basics","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fmedium.com\u00252F\u002540ajordens\u00252Fscaling-spinnaker-at-netflix-part-1-8a5ae51ee6de\u002523.fubo771g2&h=GAQGR1jp_&s=1&enc=AZOsM-rObXq-NZ8IN4zgxduow_zzyJJN8oFA7g0731F2ThqcJz6IFRXvRTzvT6q10wH8_HHvpFh-kdwFO8BPLwbx","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBS3PgL3uUEU1VC&w=720&h=720&url=https\u00253A\u00252F\u00252Fcdn-images-1.medium.com\u00252Fmax\u00252F1200\u00252F1\u00252AMrL6DHIxxY6CrL9Binpjjg.png&cfs=1","width":720}}}]}},{"name":"Design
-        Stamina Hypothesis","message":"Why (and when) we need architecture.","updated_time":"2016-09-08T03:33:06+0000","created_time":"2015-09-24T11:12:32+0000","id":"150352985174571_390601061149761","attachments":{"data":[{"title":"Design
-        Stamina Hypothesis","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fmartinfowler.com\u00252Fbliki\u00252FDesignStaminaHypothesis.html&h=MAQEPmidi&s=1&enc=AZMscZ5ByY7Xh6_-P7PLIil52a7ygWPn_25oIQRH9u6B-Nf6LVNY8uxi5yGtOTr-ePAqZNTu9GJ3SfCcbg1CYacr","media":{"image":{"height":329,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB61p6nJsutcaQ4&w=720&h=720&url=http\u00253A\u00252F\u00252Fmartinfowler.com\u00252Fbliki\u00252Fimages\u00252FdesignStaminaGraph.gif&cfs=1","width":329}}}]}},{"name":"Git
-        2.10 has been released","updated_time":"2016-09-03T06:33:51+0000","created_time":"2016-09-03T05:23:56+0000","id":"150352985174571_504539303089269","attachments":{"data":[{"title":"Git
-        2.10 has been released","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fgithub.com\u00252Fblog\u00252F2242-git-2-10-has-been-released&h=TAQEO82l0&s=1&enc=AZM8UofTAaNObrpYGEdBNrQoZE7QkXsKTTNF87IwQmioNMA3-gswGJWScFDpoZaE2RXEUZ5jT3kXjPIg4I1uqU28","media":{"image":{"height":630,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAMeAXoLqWgJ6YI&w=720&h=720&url=https\u00253A\u00252F\u00252Fcloud.githubusercontent.com\u00252Fassets\u00252F121322\u00252F16134794\u00252F284be2e6-33d4-11e6-9165-58068a872ec2.png&cfs=1","width":630}}}]}},{"name":"The
-        target=\"_blank\" vulnerability by example","message":"https:\/\/dev.to\/ben\/the-targetblank-vulnerability-by-example","updated_time":"2016-09-02T17:50:31+0000","created_time":"2016-09-01T12:49:45+0000","id":"150352985174571_503746883168511","attachments":{"data":[{"title":"The
-        target=\"_blank\" vulnerability by example","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fdev.to\u00252Fben\u00252Fthe-targetblank-vulnerability-by-example&h=9AQGeBtRp&s=1&enc=AZOTThm23Z6CU5evZqf9H9oQ6pyy78mhqT56HsssWhdcXScQmWlIdSMYz9jV4W0rU3tOEHzzzZrYKGE0_Krq2NoJ","media":{"image":{"height":700,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCuBI-PnC7cvAsc&w=720&h=720&url=https\u00253A\u00252F\u00252Fres.cloudinary.com\u00252Fpracticaldev\u00252Fimage\u00252Ffetch\u00252Fs--AGTf6Osi--\u00252Fc_imagga_scale\u00252Cf_auto\u00252Cfl_progressive\u00252Ch_700\u00252Cq_auto\u00252Cw_1480\u00252Fhttps\u00253A\u00252F\u00252Fi.vimeocdn.com\u00252Fvideo\u00252F570148251_1280x720.jpg&cfs=1","width":700}}}]}},{"name":"Katacoda
-        - Interactive Learning Platform for Software Engineers","message":"just discovered
-        this .... looks nice","updated_time":"2016-08-26T02:34:28+0000","created_time":"2016-08-26T02:34:28+0000","id":"150352985174571_500972406779292","attachments":{"data":[{"title":"Katacoda
-        - Interactive Learning Platform for Software Engineers","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fwww.katacoda.com\u00252F&h=fAQFrjrYn&s=1&enc=AZNJH9mmcIw2lNQqHm6ROIQ5NTqWeynJf1Y2EEpwrbGh7FgVQmquo86l1ghD_32IxTUnxAfotA6FsK6Bc6sGN8u7","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBt33FvO3-PQ4vI&w=720&h=720&url=https\u00253A\u00252F\u00252Fwww.katacoda.com\u00252Fimages\u00252Fbackgrounds\u00252Fpeople-working.jpg&cfs=1","width":720}}}]}},{"name":"Let''s
-        Encrypt - Wikipedia, the free encyclopedia","message":"No reason not to use
-        https for your web services: apart from the good old https:\/\/www.startssl.com,
-        now we have https:\/\/letsencrypt.org which makes getting, installing and
-        keeping a cert up to date easier. Plus its backed by many big guns and its
-        FREE! Here is the wikipedia article about it: https:\/\/en.m.wikipedia.org\/wiki\/Let\u002527s_Encrypt.
-        Just remember its pretty new and do read about how the certs are signed and
-        accepted by browser\/clients.","updated_time":"2016-08-22T00:55:29+0000","created_time":"2016-08-21T09:50:36+0000","id":"150352985174571_499005640309302","attachments":{"data":[{"title":"Let''s
-        Encrypt - Wikipedia, the free encyclopedia","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fen.m.wikipedia.org\u00252Fwiki\u00252FLet\u00252527s_Encrypt&h=hAQE2ieDs&s=1&enc=AZPtbkBwHFr5EYupqFYgk8WW05jGpS-4Rk4ajNHE9WOvW5soYK2M4TBVGfPEnHB7Vy-LWopBz9IldjsaO8EfOXWu","media":{"image":{"height":131,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQApCjwHGpTUJRSa&w=720&h=720&url=https\u00253A\u00252F\u00252Fupload.wikimedia.org\u00252Fwikipedia\u00252Fcommons\u00252Fthumb\u00252Fb\u00252Fbb\u00252FLetsencrypt_screenshot_2_domain_choice.png\u00252F220px-Letsencrypt_screenshot_2_domain_choice.png&cfs=1","width":131}}}]}},{"name":"Google''s
-        QUIC protocol: moving the web from TCP to UDP","message":"A speedier web?
-        Yes thank you!\n\n","updated_time":"2016-08-02T04:40:01+0000","created_time":"2016-08-01T13:53:37+0000","id":"150352985174571_491254161084450","attachments":{"data":[{"title":"Google''s
-        QUIC protocol: moving the web from TCP to UDP","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fma.ttias.be\u00252Fgoogles-quic-protocol-moving-web-tcp-udp\u00252F&h=wAQGbV1yc&s=1&enc=AZMZ1c0foNJLon4qufED0wOuZ4uAIS6nvl61er-e0QokB00-ixZ3a2ixHFTIQrlSIMjnAVLVQw-XqXGXADxU9qBC","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAAP49rj-fnvioY&w=720&h=720&url=https\u00253A\u00252F\u00252Fma.ttias.be\u00252Fwp-content\u00252Fuploads\u00252F2016\u00252F07\u00252Fquic_parking_lot_problem.png&cfs=1","width":720}}}]}},{"name":"Introducing
-        GitKraken Pro\u2014launch fundraiser | Axosoft","message":"https:\/\/blog.axosoft.com\/2016\/07\/28\/introducing-gitkraken-pro\/","updated_time":"2016-07-30T17:51:41+0000","created_time":"2016-07-30T17:51:41+0000","id":"150352985174571_490544944488705","attachments":{"data":[{"title":"Introducing
-        GitKraken Pro\u2014launch fundraiser | Axosoft","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fblog.axosoft.com\u00252F2016\u00252F07\u00252F28\u00252Fintroducing-gitkraken-pro\u00252F&h=1AQEXGyv7&s=1&enc=AZNNl2EkIyn5n2lfnf_BpaQkPLmDCGBRO5mgoV7Tx6tL_c4M90rwnank1dYuToQqgf6HqdJA6IIFOXCXtk9OoNyv","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCiRe3ytesqyg6K&w=720&h=720&url=https\u00253A\u00252F\u00252Fblog.axosoft.com\u00252Fwp-content\u00252Fuploads\u00252F2016\u00252F07\u00252FTeaming-Up-v2-wide.png&cfs=1&l","width":720}}}]}},{"name":"Create
-        Apps with No Configuration | React","message":"For those using React, although
-        optional webpack loaders (such as sass) still need to be added!","updated_time":"2016-07-23T10:41:04+0000","created_time":"2016-07-23T09:55:25+0000","id":"150352985174571_487752758101257","attachments":{"data":[{"title":"Create
-        Apps with No Configuration | React","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Ffacebook.github.io\u00252Freact\u00252Fblog\u00252F2016\u00252F07\u00252F22\u00252Fcreate-apps-with-no-configuration.html&h=0AQGBENqH&s=1&enc=AZPcK7aypFrQ2wkY7ZJPeUEt8Sr-ejtIl3lP1GoENK2vt-gDoqdVKAyJ86jXbe5F_PajWzW_99NM8780c0D28Pl1","media":{"image":{"height":400,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC26d6oRyFdqvxX&w=720&h=720&url=https\u00253A\u00252F\u00252Ffacebook.github.io\u00252Freact\u00252Fimg\u00252Flogo_og.png&cfs=1","width":400}}}]}},{"name":"introduction\u00b6
-        Lettuce is an extremely useful and charming tool for BDD (Behavior Driven...
-        -...","message":"Test scenarios that anyone can make sense of","updated_time":"2016-07-22T11:46:59+0000","created_time":"2016-07-22T06:28:02+0000","id":"150352985174571_487315358144997","attachments":{"data":[{"title":"introduction\u00b6
-        Lettuce is an extremely useful and charming tool for BDD (Behavior Driven...
-        -...","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Flettuce.it\u00252Ftutorial\u00252Fsimple.html\u002523tutorial-simple&h=LAQHpk3Al&s=1&enc=AZNP93JFnpxKS_Cc826K5YU5ml-MI7t6LpmRKO_vcSCqmUDQCk8D8X0tZB7Ye3vsLavW_jBg4uVLz-IiPo5XKoj1","media":{"image":{"height":687,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDL7gIjkOiwMbE7&w=720&h=720&url=http\u00253A\u00252F\u00252Flettuce.it\u00252F_images\u00252Fscreenshot5.png&cfs=1","width":687}}}]}},{"message":"Check
-        out: https:\/\/www.websequencediagrams.com \u2014 fun and friendly way to
-        create sequence diagrams for web and mobile activities. I usually end up drawing
-        these on paper or on the board.  I think it will be quite engaging to play
-        with this live!","updated_time":"2016-07-21T02:25:49+0000","created_time":"2016-07-20T03:59:51+0000","id":"150352985174571_486566974886502","attachments":{"data":[{"url":"https:\/\/www.facebook.com\/photo.php?fbid=1058362510919499&set=gm.486566974886502&type=3","media":{"image":{"height":392,"src":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/13680904_1058362510919499_8542835077177246391_n.jpg?oh=e23aa643f32eb9665e3c8ba8a43c01ca&oe=58A0A9E7","width":720}}}]}},{"name":"Dropbox
-        open-sources Lepton, a compression algorithm that cuts JPEG file size by 22\u0025","message":"http:\/\/venturebeat.com\/2016\/07\/14\/dropbox-open-sources-lepton-a-compression-algorithm-that-cuts-jpeg-file-size-by-22\/","updated_time":"2016-07-15T05:52:51+0000","created_time":"2016-07-14T19:37:54+0000","id":"150352985174571_484513371758529","attachments":{"data":[{"title":"Dropbox
-        open-sources Lepton, a compression algorithm that cuts JPEG file size by 22\u0025","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fventurebeat.com\u00252F2016\u00252F07\u00252F14\u00252Fdropbox-open-sources-lepton-a-compression-algorithm-that-cuts-jpeg-file-size-by-22\u00252F&h=cAQHtSyRz&s=1&enc=AZNEjRIgXar4FOwLc6uGxtwGMIB0XjFWvPuVBR8hMHcvlRD7xqtaftAnAiBIYyBjG_SQJMvl0aG3LNoiR5MGwlei","media":{"image":{"height":585,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCBxul8ygkf06Je&w=720&h=720&url=https\u00253A\u00252F\u00252Fventurebeat.com\u00252Fwp-content\u00252Fuploads\u00252F2015\u00252F11\u00252FDropbox-Open-outside-Novet-780x585.jpg&cfs=1","width":585}}}]}},{"name":"Serverless
-        Architectures","message":"\"Serverless\" is the new sensation in service architecture,
-        and it integrates the recent trends of microservices and reactive (message-driven)
-        architectures. We will play with some of these concepts in our SOA class this
-        coming semester. Take a peek at what''s brewing.\nhttp:\/\/martinfowler.com\/articles\/serverless.html","updated_time":"2016-07-14T19:01:17+0000","created_time":"2016-07-14T12:16:33+0000","id":"150352985174571_484366188439914","attachments":{"data":[{"title":"Serverless
-        Architectures","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fmartinfowler.com\u00252Farticles\u00252Fserverless.html\u002523benefits&h=jAQG7K83t&s=1&enc=AZPvJmESyk6TsdlPKkhoU6H_1mt2rUP9HedbzHV7Gg-aYveD1CNAA8ten1gSOHt0E76V7S0fPlmL1HprKkkRwejf","media":{"image":{"height":300,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCGBUsGoj1TcRRD&w=720&h=720&url=http\u00253A\u00252F\u00252Fmartinfowler.com\u00252Farticles\u00252Fserverless\u00252Fsps.png&cfs=1","width":300}}}]}},{"name":"Pokemon
-        Go Is Driving Insane Amounts of Sales at Small Local Businesses. Here''s How
-        It Works","message":"I''m shocked at how Pok\u00e9mon Go is taking over our
-        streets (very soon in TW, right?).  And now its having a major effect on local
-        businesses as well. Great example of how an online service can transform offline
-        ones.","updated_time":"2016-07-13T09:36:32+0000","created_time":"2016-07-13T02:42:08+0000","id":"150352985174571_483847351825131","attachments":{"data":[{"title":"Pokemon
-        Go Is Driving Insane Amounts of Sales at Small Local Businesses. Here''s How
-        It Works","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fwww.inc.com\u00252Fwalter-chen\u00252Fpok-mon-go-is-driving-insane-amounts-of-sales-at-small-local-businesses-here-s-h.html&h=0AQGBENqH&s=1&enc=AZO7_mU6Ti2CC6_W48DaDb8knM5duXfTPtoGETe_3RFvllu93NGZmKeJ-9XQHVXHLMtnZlOcffahPEZxSFk3_fFN","media":{"image":{"height":450,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCDr9LKzFIQfJFh&w=720&h=720&url=http\u00253A\u00252F\u00252Fwww.incimages.com\u00252Fuploaded_files\u00252Fimage\u00252F970x450\u00252FPokemon_Heroes_2003_03-cc_100058.jpg&cfs=1","width":450}}}]}},{"name":"SOA
-        Syllabus","message":"The syllabus for next semester''s \"Service Oriented
-        Architecture\" class is now online!  Take a look and share it with your coder
-        friends who are dreaming of their first startup :)","updated_time":"2016-07-04T11:18:26+0000","created_time":"2016-07-04T06:48:44+0000","id":"150352985174571_480686308807902","attachments":{"data":[{"title":"SOA
-        Syllabus","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fbit.ly\u00252Fsoa-syllabus&h=8AQEzZIIe&s=1&enc=AZPMvD8DtN0P1Rqm_-VvTO9JM3y-910GomHPeoH39tz9vi2IOh22AeCGVAngi-7vQwh4ZW5klcWpf-hmjxwXAxFm"}]}},{"name":"Mongolia
-        is changing all its addresses to three-word phrases","message":"A plucky little
-        online startup is changing how we address and locate geographic places. The
-        story below shows how countries and international organizations are adopting
-        this method. Take a look at https:\/\/what3words.com to find your own three
-        words :)","updated_time":"2016-06-26T05:04:58+0000","created_time":"2016-06-15T07:55:13+0000","id":"150352985174571_474135702796296","attachments":{"data":[{"title":"Mongolia
-        is changing all its addresses to three-word phrases","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fqz.com\u00252F705273\u00252Fmongolia-is-changing-all-its-addresses-to-three-word-phrases\u00252F&h=TAQEO82l0&s=1&enc=AZMmmMIarpg9VWSz45du2gFvh6N6XtzG655ZYGCtUlsTU__-1mUV9POKFM6dS01pXOov2WKAun2szRbtSWzNC6rV","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBCzb8yBioJKKug&w=720&h=720&url=https\u00253A\u00252F\u00252Fqzprod.files.wordpress.com\u00252F2016\u00252F06\u00252Fjune-13-rtx12cmt-e1465820880769.jpg\u00253Fquality\u00253D80\u002526strip\u00253Dall\u002526w\u00253D1600&cfs=1","width":720}}}]}}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?fields=name,message,updated_time,created_time,attachments\u00257Btitle,url,media\u00257D&since=1476952146&access_token=<ACCESS_TOKEN>&limit=25&__paging_token=enc_AdDRT3FRqddWHdExcEnxBuffZCipxhESZBM93TZAL1VTlcfHQr3aWV1rq23kG3uiPxcZCwvQeCiZC8fEJvrhCQFCo6fyMk1u9HaT3EXZBICgj897coSwZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?fields=name,message,updated_time,created_time,attachments\u00257Btitle,url,media\u00257D&access_token=<ACCESS_TOKEN>&limit=25&until=1466917498&__paging_token=enc_AdBmZAsUzYqHLvymmCwfLv8K48KqrS6LGOHvgiJYkb7Brd7RrwyTZA8gMCDGPWYdza3XzU34YBZB7Xn0iN7WcT9cLhvOIFzhb8ZCDP8F35OnaNwZBtQZDZD"}}}'
+      string: '{"error":{"message":"(#803) Some of the aliases you requested do not
+        exist: _12345","type":"OAuthException","code":803,"fbtrace_id":"AEc1EkYn2tt"}}'
     http_version: 
-  recorded_at: Sun, 23 Oct 2016 23:07:42 GMT
-- request:
-    method: get
-    uri: https://graph.facebook.com/150352985174571_517105121832687?access_token=<ACCESS_TOKEN_ESCAPED>&fields=name,message,updated_time,created_time,attachments%7Btitle,description,url,media%7D
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - graph.facebook.com
-      User-Agent:
-      - http.rb/2.0.3
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Origin:
-      - "*"
-      Etag:
-      - '"12c40e1438cb186785b25ed66d005b8d3328fb7b"'
-      Pragma:
-      - no-cache
-      Cache-Control:
-      - private, no-cache, no-store, must-revalidate
-      Facebook-Api-Version:
-      - v2.6
-      Expires:
-      - Sat, 01 Jan 2000 00:00:00 GMT
-      Content-Type:
-      - text/javascript; charset=UTF-8
-      X-Fb-Trace-Id:
-      - A1KgW907PvI
-      X-Fb-Rev:
-      - '2638327'
-      Vary:
-      - Accept-Encoding
-      X-Fb-Debug:
-      - pjSsBhpJdP8iXrDD1ArO6IuMqKrBKBTM2hUKvusLa4cO4BP1a9ShszwQJ9utPQpBUfqFqXRQmAm1CF9pUnAGqg==
-      Date:
-      - Sun, 23 Oct 2016 23:07:41 GMT
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"name":"Guess the Programming Language | Tutorialzine","message":"A
-        little quiz to keep you sharp on programming trends.","updated_time":"2016-10-06T06:51:44+0000","created_time":"2016-10-04T02:21:25+0000","attachments":{"data":[{"title":"Guess
-        the Programming Language | Tutorialzine","description":"Can you tell Java
-        from JavaScript? Awesome! So you are ready to take our ultimate programming
-        challenge.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=EAQG17mA8&s=1&enc=AZMbCMgTVaXlmPRdfXOtJgfx4HDjV6QJli4PSM5rQUZBi4jJa5JSzWOdQ_XO8YT4Ut4ZvtJu1oyD5IpfaAjPxEbN","media":{"image":{"height":490,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB9saA-D40lNQqm&w=720&h=720&url=http\u00253A\u00252F\u00252Fcdn.tutorialzine.com\u00252Fwp-content\u00252Fuploads\u00252F2014\u00252F06\u00252Fguess-the-programming-language.jpg&cfs=1","width":490}}}]},"id":"150352985174571_517105121832687"}'
-    http_version: 
-  recorded_at: Sun, 23 Oct 2016 23:07:42 GMT
+  recorded_at: Fri, 04 Nov 2016 05:50:43 GMT
 - request:
     method: get
     uri: https://graph.facebook.com/150352985174571?access_token=<ACCESS_TOKEN_ESCAPED>&fields=id,name,feed%7Bname,message,updated_time,created_time,attachments%7Btitle,description,url,media%7D%7D
@@ -257,7 +119,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Etag:
-      - '"c58790af4ab167d092653e0464c0d18d4dd89bfc"'
+      - '"af7a28a19ecc7b5f7a57d31ae2ecc5eb9a7011d5"'
       Pragma:
       - no-cache
       Cache-Control:
@@ -269,20 +131,31 @@ http_interactions:
       Content-Type:
       - text/javascript; charset=UTF-8
       X-Fb-Trace-Id:
-      - FZ5Ru+ZtnrN
+      - GoFnnTpJV3Z
       X-Fb-Rev:
-      - '2645472'
+      - '2663233'
       Vary:
       - Accept-Encoding
       X-Fb-Debug:
-      - kibcAx4afUXGvnHzx5xF+mXlRXVPDofCe6w06LeU2QySJkvg1LM5HwFPybrgYKEwiwE3ndWa7Bq2aKfRTRgGwg==
+      - 0ktkzLjxNYMz5WLB1VcdBhXU37Q2XCVHiUQTB4GwpUmTBVUqlbzzWBwJ+VaPTzAeWdxXt16v2ujouTucP0v3Fg==
       Date:
-      - Wed, 26 Oct 2016 16:55:01 GMT
+      - Fri, 04 Nov 2016 05:50:43 GMT
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"id":"150352985174571","name":"Web Service Development \u0040 NTHU","feed":{"data":[{"name":"GitHub
+      string: '{"id":"150352985174571","name":"Web Service Development \u0040 NTHU","feed":{"data":[{"name":"seriot.ch
+        - Parsing JSON is a Minefield \ud83d\udca3","message":"From the article: \"JSON
+        is not a data format you can rely on blindly [...] edge cases and maliciously
+        crafted payloads can cause bugs, crashes and denial of services, mainly because
+        JSON libraries rely on specifications that have evolved over time and that
+        left many details loosely specified or not specified at all.\"  Long story
+        short: it seems XML will never die :D (actually, parsing XML is even worse...)","updated_time":"2016-10-28T02:09:39+0000","created_time":"2016-10-27T14:46:58+0000","id":"150352985174571_527664860776713","attachments":{"data":[{"title":"seriot.ch
+        - Parsing JSON is a Minefield \ud83d\udca3","description":"JSON is the de
+        facto standard when it comes to (un)serialising and exchanging data in web
+        and mobile programming. But how well do you really know JSON? We''ll read
+        the specifications and write test cases together. We''ll test common JSON
+        libraries against our test cases. I''ll show that JSON is not the...","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fseriot.ch\u00252Fparsing_json.html&h=IAQFKye6D&s=1&enc=AZPAOV376JjZZQo9LD_zAMwwn8BLlyx7Do3_qbUflCMU7VMth7LPCR0yOStbP3_0xKbjrXZdAL5O3XDKUx-3z0sq","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBafep0D8nqgNS7&w=720&h=720&url=http\u00253A\u00252F\u00252Fseriot.ch\u00252Fjson\u00252Fpruned_results.png&cfs=1","width":720}}}]}},{"name":"GitHub
         Dumps REST Calls for Facebook''s GraphQL - The New Stack","message":"Github''s
         adoption of GraphQL for APIs, over RESTful services, might be the tipping
         point that makes GraphQL ubiquitous. From what little exposure I have to it
@@ -296,140 +169,98 @@ http_interactions:
         to streamline the remote querying services of its site, GitHub is moving its
         API (application programming interface) from REST calls to Facebook\u2019s
         GraphQL API. In the company\u2019s recent user conference GitHub Universe,
-        Kyle Daigle, GitHub platform engineering manager, explained that the company...","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fthenewstack.io\u00252Fgithub-dumps-rest-graphql-api\u00252F&h=BAQEQpLDV&s=1&enc=AZMuArWJ2KbXcSfRLOLzlCxKphl_vQiF53WL06dX7ibSzpbcnv7ZFv0F5oWb3es83oDIZlhZIdep6q9x7QtH0RHC","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC5HLw3s46cLqn7&w=720&h=720&url=http\u00253A\u00252F\u00252Fthenewstack.io\u00252Fwp-content\u00252Fuploads\u00252F2016\u00252F09\u00252FGHU-GraphQL-Woah.jpg&cfs=1&sx=0&sy=0&sw=2448&sh=2448","width":720}}}]}},{"name":"Taking
+        Kyle Daigle, GitHub platform engineering manager, explained that the company...","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fthenewstack.io\u00252Fgithub-dumps-rest-graphql-api\u00252F&h=hAQF4ktMg&s=1&enc=AZOvjV-V02X10LOlHg6bfhvkKJS3eNlDRiWfjQd7smyHGU-xKSQkLb7ihvrqfJKBOwFm8EGrJ2A6sMRV13fHFSs1","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC5HLw3s46cLqn7&w=720&h=720&url=http\u00253A\u00252F\u00252Fthenewstack.io\u00252Fwp-content\u00252Fuploads\u00252F2016\u00252F09\u00252FGHU-GraphQL-Woah.jpg&cfs=1&sx=0&sy=0&sw=2448&sh=2448","width":720}}}]}},{"name":"Taking
         PHP Seriously","message":"https:\/\/m.facebook.com\/story.php?story_fbid=1098448240203391&id=100001146751327","updated_time":"2016-10-13T18:17:23+0000","created_time":"2016-10-13T17:15:20+0000","id":"150352985174571_521137638096102","attachments":{"data":[{"title":"Taking
-        PHP Seriously","description":"by Keith Adams, Slack Engineering","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fslack.engineering\u00252Ftaking-php-seriously-cf7a60065329\u002523.g3w9ecf66&h=iAQHfhNKM&s=1&enc=AZM86DcXm5yXd89ntvD7fgR76vW9E2_kSIUkmhk0VInOMk4wK27Dyf7xy4a6Zr6xW4NK33_piBLoGBbEGayZSN4i","media":{"image":{"height":669,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCmbxAdG46sLBUD&w=720&h=720&url=https\u00253A\u00252F\u00252Fd262ilb51hltx0.cloudfront.net\u00252Fmax\u00252F1200\u00252F1\u00252Ax5N8tfTVEmQro2ySxoZtvw.jpeg&cfs=1","width":669}}}]}},{"name":"How
+        PHP Seriously","description":"by Keith Adams, Slack Engineering","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fslack.engineering\u00252Ftaking-php-seriously-cf7a60065329\u002523.g3w9ecf66&h=BAQG0cS8U&s=1&enc=AZM1GXdTFyjTS1jREYYZVdRCCtWbkFebSfKRM8s7AS--vxwzD85CWRj9vRlwvT9AfVLRLBHWgP6fMfKQUDeSK-79","media":{"image":{"height":669,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCmbxAdG46sLBUD&w=720&h=720&url=https\u00253A\u00252F\u00252Fd262ilb51hltx0.cloudfront.net\u00252Fmax\u00252F1200\u00252F1\u00252Ax5N8tfTVEmQro2ySxoZtvw.jpeg&cfs=1","width":669}}}]}},{"name":"How
         To Save The Princess In 8 Programming Languages","updated_time":"2016-10-06T08:39:47+0000","created_time":"2016-10-06T08:28:40+0000","id":"150352985174571_518029841740215","attachments":{"data":[{"title":"How
         To Save The Princess In 8 Programming Languages","description":"Programming
         sucks. This fairytale comic shows the different ways in which programming
-        languages could fail you in the fantasy kingdom.","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Ftoggl.com\u00252Fprogramming-princess&h=xAQHF7IZn&s=1&enc=AZPT2sBsY0_DCenaNCG_BsPV45iIqV-JSMdaenUQX9sLpkaCZUrI8bYCB_WCP9DfKd5pyT8G_Eo8MqfFVVixpLOy","media":{"image":{"height":630,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDEZQJwFjW82Fzm&w=720&h=720&url=https\u00253A\u00252F\u00252Ftoggl.com\u00252Fimages\u00252Fshare-img\u00252Ffb-share-git-princess.jpg&cfs=1","width":630}}}]}},{"name":"Guess
+        languages could fail you in the fantasy kingdom.","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Ftoggl.com\u00252Fprogramming-princess&h=5AQFsUouS&s=1&enc=AZPrKaWN15ye9EVEggtrvz1Sd1LqnFmq8gb4WmgBjO0fCKm5M43dd6loNgUsEA5siZXwqfxuH7KLJUmtTbrlNFyT","media":{"image":{"height":630,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDEZQJwFjW82Fzm&w=720&h=720&url=https\u00253A\u00252F\u00252Ftoggl.com\u00252Fimages\u00252Fshare-img\u00252Ffb-share-git-princess.jpg&cfs=1","width":630}}}]}},{"name":"Guess
         the Programming Language | Tutorialzine","message":"A little quiz to keep
         you sharp on programming trends.","updated_time":"2016-10-06T06:51:44+0000","created_time":"2016-10-04T02:21:25+0000","id":"150352985174571_517105121832687","attachments":{"data":[{"title":"Guess
         the Programming Language | Tutorialzine","description":"Can you tell Java
         from JavaScript? Awesome! So you are ready to take our ultimate programming
-        challenge.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=LAQEkOXZt&s=1&enc=AZMwy0_l76RdgXTvZYCA_-LDh6wwKyQm_HeESA58uK3dKtL1ETBCbO-JxKnW_52pBV5hPL2FST_QAlnc9eJGTTl1","media":{"image":{"height":490,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB9saA-D40lNQqm&w=720&h=720&url=http\u00253A\u00252F\u00252Fcdn.tutorialzine.com\u00252Fwp-content\u00252Fuploads\u00252F2014\u00252F06\u00252Fguess-the-programming-language.jpg&cfs=1","width":490}}}]}},{"name":"How
+        challenge.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=mAQEBBe4q&s=1&enc=AZPwjwOZNu48jFuNtuRbhHleXPsANVHFR__PjWI0EwBdYoaEgOzRaSnDJ_gMIqydRjz5A3wWomdj3AbjUQPODvs6","media":{"image":{"height":490,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB9saA-D40lNQqm&w=720&h=720&url=http\u00253A\u00252F\u00252Fcdn.tutorialzine.com\u00252Fwp-content\u00252Fuploads\u00252F2014\u00252F06\u00252Fguess-the-programming-language.jpg&cfs=1","width":490}}}]}},{"name":"How
         it feels to learn JavaScript in 2016","updated_time":"2016-10-06T01:18:12+0000","created_time":"2016-10-05T13:47:43+0000","id":"150352985174571_517701838439682","attachments":{"data":[{"title":"How
         it feels to learn JavaScript in 2016","description":"Edit: Thanks for pointing
         typos and mistakes, I\u2019ll update the article as noted. Discussion in HackerNews
-        and Reddit.","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fhackernoon.com\u00252Fhow-it-feels-to-learn-javascript-in-2016-d3a717dd577f\u002523.m0lkkfan1&h=QAQEDlt5e&s=1&enc=AZNZnAvj_3Bk3oJBTr7wncI4YR8UhkRSoZ6HTh-bmZxJx6hJRqXSMVKzrx34z8Oya5XWUXoPFbgEsrgL65--5HjH","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBw5xIxnMhHtpnj&w=720&h=720&url=https\u00253A\u00252F\u00252Fcdn-images-2.medium.com\u00252Fmax\u00252F1200\u00252F1\u00252AraWO3dhM4jMjf9VY-kZzNg.png&cfs=1","width":720}}}]}},{"name":"5
+        and Reddit.","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fhackernoon.com\u00252Fhow-it-feels-to-learn-javascript-in-2016-d3a717dd577f\u002523.m0lkkfan1&h=BAQG0cS8U&s=1&enc=AZMMY58mGJxdf2Lt9ePLZUZTh6zQEMpK5ozpJt6QYwjgqBm7_BT6H6bzmvw_ZE_dm0WNuF-GWLvDxUp5BUIbnfnA","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBw5xIxnMhHtpnj&w=720&h=720&url=https\u00253A\u00252F\u00252Fcdn-images-2.medium.com\u00252Fmax\u00252F1200\u00252F1\u00252AraWO3dhM4jMjf9VY-kZzNg.png&cfs=1","width":720}}}]}},{"name":"5
         emerging programming languages with a bright future","message":"Up and coming
         languages worth keeping our eyes on.  I''m already a huge fan of Crystal and
         Rust, but the author has convinced me to pay more attention to Kotlin and
         Elm.","updated_time":"2016-09-22T08:12:35+0000","created_time":"2016-09-21T10:13:58+0000","id":"150352985174571_511894255687107","attachments":{"data":[{"title":"5
         emerging programming languages with a bright future","description":"Get the
         elevator pitch for five of the most promising languages (some of them you
-        probably haven''t heard of before) that have the potential to grow...","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftechbeacon.com\u00252F5-emerging-programming-languages-bright-future\u00253Futm_content\u00253Dbuffer300a1\u002526utm_medium\u00253Dsocial\u002526utm_source\u00253Dtwitter.com\u002526utm_campaign\u00253Dbuffer&h=uAQFyfQhv&s=1&enc=AZPPipsXORfRYPLey-fYNR2-DtHJyKFaX3lKEaDXueH0xC2gj4KC4thpju0QmHEIsRNuSRJKhU54j7OdidNPY7gt","media":{"image":{"height":480,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAxbtCPHht3vWb6&w=720&h=720&url=http\u00253A\u00252F\u00252Ftechbeacon.com\u00252Fsites\u00252Fdefault\u00252Ffiles\u00252Fstyles\u00252Fsocial\u00252Fpublic\u00252Ffield\u00252Fimage\u00252F5_emerging_programming_languages_with_a_bright_future.jpg\u00253Fitok\u00253Dm0nlEinF&cfs=1","width":480}}}]}},{"name":"A
+        probably haven''t heard of before) that have the potential to grow...","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftechbeacon.com\u00252F5-emerging-programming-languages-bright-future\u00253Futm_content\u00253Dbuffer300a1\u002526utm_medium\u00253Dsocial\u002526utm_source\u00253Dtwitter.com\u002526utm_campaign\u00253Dbuffer&h=vAQHNS2qk&s=1&enc=AZO45ARf2y0u46Ar85B5gKTxKR8vGYtyi5KKxupNg3fyLcnJMmWgYhdHkuMrO0sKh4kfr2ri34q7xmd-w2QHD3r9","media":{"image":{"height":480,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAxbtCPHht3vWb6&w=720&h=720&url=http\u00253A\u00252F\u00252Ftechbeacon.com\u00252Fsites\u00252Fdefault\u00252Ffiles\u00252Fstyles\u00252Fsocial\u00252Fpublic\u00252Ffield\u00252Fimage\u00252F5_emerging_programming_languages_with_a_bright_future.jpg\u00253Fitok\u00253Dm0nlEinF&cfs=1","width":480}}}]}},{"name":"A
         whole new Universe","message":"I can''t even wrap my head around all the new
         features Github just released: code reviews, kanban boards, and much more.","updated_time":"2016-09-19T09:14:51+0000","created_time":"2016-09-15T03:42:48+0000","id":"150352985174571_509461352597064","attachments":{"data":[{"title":"A
         whole new Universe","description":"Learn about the exciting features and announcements
         revealed at this year\u2019s annual GitHub Universe conference at historic
-        Pier 70 in San Francisco.","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fgithub.com\u00252Funiverse-2016&h=tAQFB9sTO&s=1&enc=AZOBVuVkCbishkcMftzb_1w0o11p2yWlgRq0ymgoobnIQ7LBSEhyw0ZPOGUGtTMeP4ckJI8au40LE_wg2mfTEpJM","media":{"image":{"height":630,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBsb70KV75vMJ8B&w=720&h=720&url=https\u00253A\u00252F\u00252Fassets-cdn.github.com\u00252Fimages\u00252Fmodules\u00252Funiverse-2016\u00252Funiverse-open-graph.png&cfs=1","width":630}}}]}},{"name":"Vert.x","message":"http:\/\/vertx.io\/","updated_time":"2016-09-13T20:34:39+0000","created_time":"2016-09-13T20:34:39+0000","id":"150352985174571_508953969314469","attachments":{"data":[{"title":"Vert.x","description":"Vert.x
-        is a tool-kit for building reactive applications on the JVM.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fvertx.io\u00252F&h=NAQG9A1a2&s=1&enc=AZNMqUZEGBqZsKGU8Mvb47om6xOazFfoiGZ6SG5mM2w4WUcCRAz_Xoc4X297eb9cPGZOOUAlODF1vjNHvRFtk7VP","media":{"image":{"height":360,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC13D8UqDGMX5IF&w=720&h=720&url=http\u00253A\u00252F\u00252Fvertx.io\u00252Fassets\u00252Fuser_logos\u00252Fswisscom.png&cfs=1","width":360}}}]}},{"name":"Codecademy","updated_time":"2016-09-13T02:04:20+0000","created_time":"2016-09-13T02:04:20+0000","id":"150352985174571_508631766013356","attachments":{"data":[{"title":"Timeline
+        Pier 70 in San Francisco.","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fgithub.com\u00252Funiverse-2016&h=wAQFtCCu_&s=1&enc=AZNx4_SWcOjqcsL7AqObZgRL-woA8Nc-V2JhxJE5ieuaaDXncQEEow62klPtrA81jV2nOcBTwuRk_QzvuuQJbkNr","media":{"image":{"height":630,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBsb70KV75vMJ8B&w=720&h=720&url=https\u00253A\u00252F\u00252Fassets-cdn.github.com\u00252Fimages\u00252Fmodules\u00252Funiverse-2016\u00252Funiverse-open-graph.png&cfs=1","width":630}}}]}},{"name":"Vert.x","message":"http:\/\/vertx.io\/","updated_time":"2016-09-13T20:34:39+0000","created_time":"2016-09-13T20:34:39+0000","id":"150352985174571_508953969314469","attachments":{"data":[{"title":"Vert.x","description":"Vert.x
+        is a tool-kit for building reactive applications on the JVM.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fvertx.io\u00252F&h=XAQF4xInv&s=1&enc=AZOcAIpC3h-MF8YDY_8qplPFjEOu4ES9cV5IZMTk22kuHn6vLD7lgky_NWSxTQEJ30a740ivovHXNmni8mMuHGmS","media":{"image":{"height":360,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC13D8UqDGMX5IF&w=720&h=720&url=http\u00253A\u00252F\u00252Fvertx.io\u00252Fassets\u00252Fuser_logos\u00252Fswisscom.png&cfs=1","width":360}}}]}},{"name":"Codecademy","updated_time":"2016-09-13T02:04:20+0000","created_time":"2016-09-13T02:04:20+0000","id":"150352985174571_508631766013356","attachments":{"data":[{"title":"Timeline
         Photos","description":"Are you a Javascript guru? Then you should check out
         our course in React.js!\n\nReact enables websites to display complex animations,
         large volumes of data, or other memory-heavy tasks without slowing down. At
         the end of the course, you\u2019ll know how to build sophisticated React applications.
-        Check it out!\n\nhttp:\/\/codecademy.io\/YRFS3047CDf","url":"https:\/\/www.facebook.com\/codecademy\/photos\/a.553205214692855.138303.272256069454439\/1387442691269099\/?type=3","media":{"image":{"height":377,"src":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/14264951_1387442691269099_7557697962736020966_n.png?oh=1c67604ccd5679d98c72100f943f3863&oe=5891713F","width":720}}}]}},{"name":"Scaling
-        Spinnaker at Netflix \u2014 The Basics","message":"https:\/\/medium.com\/\u0040ajordens\/scaling-spinnaker-at-netflix-part-1-8a5ae51ee6de#.fubo771g2","updated_time":"2016-09-11T09:14:53+0000","created_time":"2016-09-11T09:14:53+0000","id":"150352985174571_507894159420450","attachments":{"data":[{"title":"Scaling
-        Spinnaker at Netflix \u2014 The Basics","description":"The Backstory","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fmedium.com\u00252F\u002540ajordens\u00252Fscaling-spinnaker-at-netflix-part-1-8a5ae51ee6de\u002523.fubo771g2&h=JAQFMAksP&s=1&enc=AZN8cMfGS70kFQMD1hLWtUjhjw8HlIyKOiVj7cS2uhzClW0FHaHPeLE27ZGsaqZweHyENAIoSFtv1rn50F8ypOZn","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBS3PgL3uUEU1VC&w=720&h=720&url=https\u00253A\u00252F\u00252Fcdn-images-1.medium.com\u00252Fmax\u00252F1200\u00252F1\u00252AMrL6DHIxxY6CrL9Binpjjg.png&cfs=1","width":720}}}]}},{"name":"Design
-        Stamina Hypothesis","message":"Why (and when) we need architecture.","updated_time":"2016-09-08T03:33:06+0000","created_time":"2015-09-24T11:12:32+0000","id":"150352985174571_390601061149761","attachments":{"data":[{"title":"Design
-        Stamina Hypothesis","description":"The value of good software design is economic:
-        you can continue to add new functionality quickly even as the code-base grows
-        in size.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fmartinfowler.com\u00252Fbliki\u00252FDesignStaminaHypothesis.html&h=0AQG-z_xt&s=1&enc=AZNUmjnZMfKYk--re8eXShm4XcF7MfNUMzhjWWgNxNhWj5nsnGYKiDkGYgy_x3xAeqV4EzzJ1d54Ncr2hrAp2yyB","media":{"image":{"height":329,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB61p6nJsutcaQ4&w=720&h=720&url=http\u00253A\u00252F\u00252Fmartinfowler.com\u00252Fbliki\u00252Fimages\u00252FdesignStaminaGraph.gif&cfs=1","width":329}}}]}},{"name":"Git
-        2.10 has been released","updated_time":"2016-09-03T06:33:51+0000","created_time":"2016-09-03T05:23:56+0000","id":"150352985174571_504539303089269","attachments":{"data":[{"title":"Git
-        2.10 has been released","description":"The open source Git project has just
-        released Git 2.10.0, with features and bugfixes from over 70 contributors.
-        Here''s our look at some of the most interesting new features: Progress reporting
-        for...","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fgithub.com\u00252Fblog\u00252F2242-git-2-10-has-been-released&h=mAQEUdhVr&s=1&enc=AZM2Nlce1FdCxZqMA9lcNbLvsiBOHCNhPbcAs_RPg-RJLTT8RC6yaEIIkJiR2HeBA9hKfT1uHYseL9UeDGJbDVgw","media":{"image":{"height":630,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAMeAXoLqWgJ6YI&w=720&h=720&url=https\u00253A\u00252F\u00252Fcloud.githubusercontent.com\u00252Fassets\u00252F121322\u00252F16134794\u00252F284be2e6-33d4-11e6-9165-58068a872ec2.png&cfs=1","width":630}}}]}},{"name":"The
-        target=\"_blank\" vulnerability by example","message":"https:\/\/dev.to\/ben\/the-targetblank-vulnerability-by-example","updated_time":"2016-09-02T17:50:31+0000","created_time":"2016-09-01T12:49:45+0000","id":"150352985174571_503746883168511","attachments":{"data":[{"title":"The
-        target=\"_blank\" vulnerability by example","description":"Instagram leaves
-        its users open to a simple phishing attack","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fdev.to\u00252Fben\u00252Fthe-targetblank-vulnerability-by-example&h=IAQEu0Wpp&s=1&enc=AZM1YhiXcj8XpQPFdfpu7mf9bTE4LLGdCzkClL9UFKGPCUtKQvoLOhFYJeOODS1TYI_KQTgNtO0TPqb-N8OB4rri","media":{"image":{"height":700,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCuBI-PnC7cvAsc&w=720&h=720&url=https\u00253A\u00252F\u00252Fres.cloudinary.com\u00252Fpracticaldev\u00252Fimage\u00252Ffetch\u00252Fs--AGTf6Osi--\u00252Fc_imagga_scale\u00252Cf_auto\u00252Cfl_progressive\u00252Ch_700\u00252Cq_auto\u00252Cw_1480\u00252Fhttps\u00253A\u00252F\u00252Fi.vimeocdn.com\u00252Fvideo\u00252F570148251_1280x720.jpg&cfs=1","width":700}}}]}},{"name":"Katacoda
-        - Interactive Learning Platform for Software Engineers","message":"just discovered
-        this .... looks nice","updated_time":"2016-08-26T02:34:28+0000","created_time":"2016-08-26T02:34:28+0000","id":"150352985174571_500972406779292","attachments":{"data":[{"title":"Katacoda
-        - Interactive Learning Platform for Software Engineers","description":"Learn
-        the latest technologies with our hands-on labs","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fwww.katacoda.com\u00252F&h=gAQGgvDrK&s=1&enc=AZO8tyGR0zvrmvuubnDQxdYafyIe6JOndG1LAgevgQwvWQhJipw-l1QD41kaGzZCX7AYMeYr8vvuSMhDFViJMJTA","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBt33FvO3-PQ4vI&w=720&h=720&url=https\u00253A\u00252F\u00252Fwww.katacoda.com\u00252Fimages\u00252Fbackgrounds\u00252Fpeople-working.jpg&cfs=1","width":720}}}]}},{"name":"Let''s
-        Encrypt - Wikipedia, the free encyclopedia","message":"No reason not to use
-        https for your web services: apart from the good old https:\/\/www.startssl.com,
-        now we have https:\/\/letsencrypt.org which makes getting, installing and
-        keeping a cert up to date easier. Plus its backed by many big guns and its
-        FREE! Here is the wikipedia article about it: https:\/\/en.m.wikipedia.org\/wiki\/Let\u002527s_Encrypt.
-        Just remember its pretty new and do read about how the certs are signed and
-        accepted by browser\/clients.","updated_time":"2016-08-22T00:55:29+0000","created_time":"2016-08-21T09:50:36+0000","id":"150352985174571_499005640309302","attachments":{"data":[{"title":"Let''s
-        Encrypt - Wikipedia, the free encyclopedia","description":"Let''s Encrypt
-        is a certificate authority that launched on April 12, 2016[1][2] that provides
-        free X.509 certificates for Transport Layer Security (TLS) encryption via
-        an automated process designed to eliminate the current complex process of
-        manual creation, validation, signing, installation, and ren...","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fen.m.wikipedia.org\u00252Fwiki\u00252FLet\u00252527s_Encrypt&h=UAQEsc6jt&s=1&enc=AZM_UTQXQVgR8rG92TmW3SDNSGrD_wjveMtir-Qhm5OmLDpMYtKf_Y26_qZj3hPWfeUSIeaRfMAIs7Nh4qTCsISj","media":{"image":{"height":131,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQApCjwHGpTUJRSa&w=720&h=720&url=https\u00253A\u00252F\u00252Fupload.wikimedia.org\u00252Fwikipedia\u00252Fcommons\u00252Fthumb\u00252Fb\u00252Fbb\u00252FLetsencrypt_screenshot_2_domain_choice.png\u00252F220px-Letsencrypt_screenshot_2_domain_choice.png&cfs=1","width":131}}}]}},{"name":"Google''s
-        QUIC protocol: moving the web from TCP to UDP","message":"A speedier web?
-        Yes thank you!\n\n","updated_time":"2016-08-02T04:40:01+0000","created_time":"2016-08-01T13:53:37+0000","id":"150352985174571_491254161084450","attachments":{"data":[{"title":"Google''s
-        QUIC protocol: moving the web from TCP to UDP","description":"The QUIC protocol
-        (Quick UDP Internet Connections) is an entirely new protocol for the web developed
-        on top of UDP instead of TCP. Some are even (jokingly) calling it TCP\/2.
-        I only learned about QUIC a few weeks ago while doing the curl & libcurl episode
-        of the SysCast podcast. The really interestin...","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fma.ttias.be\u00252Fgoogles-quic-protocol-moving-web-tcp-udp\u00252F&h=RAQEYDKxw&s=1&enc=AZP9Z_8QG5GRdtFg3COWEvE_fKFa_5C_4uapMolCcDn03knEr_VyTQ6eYagFgcMlcCYeT9_AkazP6POeQp4-TQ-D","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAAP49rj-fnvioY&w=720&h=720&url=https\u00253A\u00252F\u00252Fma.ttias.be\u00252Fwp-content\u00252Fuploads\u00252F2016\u00252F07\u00252Fquic_parking_lot_problem.png&cfs=1","width":720}}}]}},{"name":"Introducing
-        GitKraken Pro\u2014launch fundraiser | Axosoft","message":"https:\/\/blog.axosoft.com\/2016\/07\/28\/introducing-gitkraken-pro\/","updated_time":"2016-07-30T17:51:41+0000","created_time":"2016-07-30T17:51:41+0000","id":"150352985174571_490544944488705","attachments":{"data":[{"title":"Introducing
-        GitKraken Pro\u2014launch fundraiser | Axosoft","description":"Learn about
-        the new edition of GitKraken, with even more features, and help raise money
-        and awareness for the Nightscout Foundation, an open source technology project
-        helping those affected by Type 1 diabetes!","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Fblog.axosoft.com\u00252F2016\u00252F07\u00252F28\u00252Fintroducing-gitkraken-pro\u00252F&h=-AQGdbSSK&s=1&enc=AZObEliJjBtfhK10s4RiR5iBlC-6SMim829br3ueBzfbGoXdCL8qPW4CoJehnCwXMMNZNVETuh9Z6VRa03419JQe","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCiRe3ytesqyg6K&w=720&h=720&url=https\u00253A\u00252F\u00252Fblog.axosoft.com\u00252Fwp-content\u00252Fuploads\u00252F2016\u00252F07\u00252FTeaming-Up-v2-wide.png&cfs=1&l","width":720}}}]}},{"name":"Create
-        Apps with No Configuration | React","message":"For those using React, although
-        optional webpack loaders (such as sass) still need to be added!","updated_time":"2016-07-23T10:41:04+0000","created_time":"2016-07-23T09:55:25+0000","id":"150352985174571_487752758101257","attachments":{"data":[{"title":"Create
-        Apps with No Configuration | React","description":"A JavaScript library for
-        building user interfaces","url":"https:\/\/www.facebook.com\/l.php?u=https\u00253A\u00252F\u00252Ffacebook.github.io\u00252Freact\u00252Fblog\u00252F2016\u00252F07\u00252F22\u00252Fcreate-apps-with-no-configuration.html&h=SAQGKLveJ&s=1&enc=AZOlJy-fVHd34g9NyWLYYsTJpqe2aQbZ_bRA_AKxQseOOOfm_HqT-dVVj3S01WZD83FUx9vIZKxqGudVGMoWJMcO","media":{"image":{"height":400,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC26d6oRyFdqvxX&w=720&h=720&url=https\u00253A\u00252F\u00252Ffacebook.github.io\u00252Freact\u00252Fimg\u00252Flogo_og.png&cfs=1","width":400}}}]}},{"name":"introduction\u00b6
-        Lettuce is an extremely useful and charming tool for BDD (Behavior Driven...
-        -...","message":"Test scenarios that anyone can make sense of","updated_time":"2016-07-22T11:46:59+0000","created_time":"2016-07-22T06:28:02+0000","id":"150352985174571_487315358144997","attachments":{"data":[{"title":"introduction\u00b6
-        Lettuce is an extremely useful and charming tool for BDD (Behavior Driven...
-        -...","description":"Lettuce is an extremely useful and charming tool for
-        BDD (Behavior Driven Development). It can execute plain-text functional descriptions
-        as automated tests for Python projects, just as Cucumber does for Ruby.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Flettuce.it\u00252Ftutorial\u00252Fsimple.html\u002523tutorial-simple&h=FAQGWhi_V&s=1&enc=AZOq0vipkT-2BJL5l3L3gnoDQjRA65yMpzPp0_61d1mOR75X8PJIY0SbXH7cbIzYIrb9A6Y1Eym-eFNN_oFHxZHc","media":{"image":{"height":687,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDL7gIjkOiwMbE7&w=720&h=720&url=http\u00253A\u00252F\u00252Flettuce.it\u00252F_images\u00252Fscreenshot5.png&cfs=1","width":687}}}]}},{"message":"Check
-        out: https:\/\/www.websequencediagrams.com \u2014 fun and friendly way to
-        create sequence diagrams for web and mobile activities. I usually end up drawing
-        these on paper or on the board.  I think it will be quite engaging to play
-        with this live!","updated_time":"2016-07-21T02:25:49+0000","created_time":"2016-07-20T03:59:51+0000","id":"150352985174571_486566974886502","attachments":{"data":[{"description":"Check
-        out: https:\/\/www.websequencediagrams.com \u2014 fun and friendly way to
-        create sequence diagrams for web and mobile activities. I usually end up drawing
-        these on paper or on the board.  I think it will be quite engaging to play
-        with this live!","url":"https:\/\/www.facebook.com\/photo.php?fbid=1058362510919499&set=gm.486566974886502&type=3","media":{"image":{"height":392,"src":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/13680904_1058362510919499_8542835077177246391_n.jpg?oh=e23aa643f32eb9665e3c8ba8a43c01ca&oe=58A0A9E7","width":720}}}]}},{"name":"Dropbox
-        open-sources Lepton, a compression algorithm that cuts JPEG file size by 22\u0025","message":"http:\/\/venturebeat.com\/2016\/07\/14\/dropbox-open-sources-lepton-a-compression-algorithm-that-cuts-jpeg-file-size-by-22\/","updated_time":"2016-07-15T05:52:51+0000","created_time":"2016-07-14T19:37:54+0000","id":"150352985174571_484513371758529","attachments":{"data":[{"title":"Dropbox
-        open-sources Lepton, a compression algorithm that cuts JPEG file size by 22\u0025","description":"Cloud
-        syncing and sharing software company Dropbox today announced that it has released
-        an image compression algorithm called Lepton under an Apache open-source license
-        on GitHub.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fventurebeat.com\u00252F2016\u00252F07\u00252F14\u00252Fdropbox-open-sources-lepton-a-compression-algorithm-that-cuts-jpeg-file-size-by-22\u00252F&h=sAQF-3I4t&s=1&enc=AZOQ0oWoyWXC28pwOZKXN3iktksoqx8dUur7jMWbCIKaR6cksX2Qe9JA3FM0wf5PpeckJ2DsRy5cAinoAjQYzMjs","media":{"image":{"height":585,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCBxul8ygkf06Je&w=720&h=720&url=https\u00253A\u00252F\u00252Fventurebeat.com\u00252Fwp-content\u00252Fuploads\u00252F2015\u00252F11\u00252FDropbox-Open-outside-Novet-780x585.jpg&cfs=1","width":585}}}]}},{"name":"Serverless
-        Architectures","message":"\"Serverless\" is the new sensation in service architecture,
-        and it integrates the recent trends of microservices and reactive (message-driven)
-        architectures. We will play with some of these concepts in our SOA class this
-        coming semester. Take a peek at what''s brewing.\nhttp:\/\/martinfowler.com\/articles\/serverless.html","updated_time":"2016-07-14T19:01:17+0000","created_time":"2016-07-14T12:16:33+0000","id":"150352985174571_484366188439914","attachments":{"data":[{"title":"Serverless
-        Architectures","description":"Serverless architectures replace a managed server
-        with a collection of third party services and FaaS","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fmartinfowler.com\u00252Farticles\u00252Fserverless.html\u002523benefits&h=DAQGWi2PV&s=1&enc=AZNAoJheX5WJrmUW4OCNaTUIc4YiLww-HP2jwr0Fk74_-rFwauuk_uHb3HGuJ5GbDlDf6qwbQ8la4ud3WhnnyQ1E","media":{"image":{"height":300,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCGBUsGoj1TcRRD&w=720&h=720&url=http\u00253A\u00252F\u00252Fmartinfowler.com\u00252Farticles\u00252Fserverless\u00252Fsps.png&cfs=1","width":300}}}]}},{"name":"Pokemon
-        Go Is Driving Insane Amounts of Sales at Small Local Businesses. Here''s How
-        It Works","message":"I''m shocked at how Pok\u00e9mon Go is taking over our
-        streets (very soon in TW, right?).  And now its having a major effect on local
-        businesses as well. Great example of how an online service can transform offline
-        ones.","updated_time":"2016-07-13T09:36:32+0000","created_time":"2016-07-13T02:42:08+0000","id":"150352985174571_483847351825131","attachments":{"data":[{"title":"Pokemon
-        Go Is Driving Insane Amounts of Sales at Small Local Businesses. Here''s How
-        It Works","description":"For $1.19 an hour, you can have more customers than
-        you''ve ever seen in your life","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fwww.inc.com\u00252Fwalter-chen\u00252Fpok-mon-go-is-driving-insane-amounts-of-sales-at-small-local-businesses-here-s-h.html&h=uAQFyfQhv&s=1&enc=AZOtxYNAgRl3Cg6Q57ZG8oEK4xyUD-iFIl_lCmF2j6fx8x6eavOzKa2TsTtKntTwOVJCI03O4rkbQjD5BZhvq7vC","media":{"image":{"height":450,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCDr9LKzFIQfJFh&w=720&h=720&url=http\u00253A\u00252F\u00252Fwww.incimages.com\u00252Fuploaded_files\u00252Fimage\u00252F970x450\u00252FPokemon_Heroes_2003_03-cc_100058.jpg&cfs=1","width":450}}}]}},{"name":"SOA
-        Syllabus","message":"The syllabus for next semester''s \"Service Oriented
-        Architecture\" class is now online!  Take a look and share it with your coder
-        friends who are dreaming of their first startup :)","updated_time":"2016-07-04T11:18:26+0000","created_time":"2016-07-04T06:48:44+0000","id":"150352985174571_480686308807902","attachments":{"data":[{"title":"SOA
-        Syllabus","description":"Institute of Service Science, National Tsing Hua
-        University\u000bService Oriented Architecture\u000bFall 2016 Course Duration:
-        Sep 2015 \u2013 Jan 2016\u000bClass Time: Mondays, 9:00am-12:00pm\u000b Instructor:
-        Soumya Ray (soumya.ray\u0040iss.nthu.edu.tw)\u000bAssistant: TBA (\u0040...
-        available on Slack) How do companies lik...","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fbit.ly\u00252Fsoa-syllabus&h=lAQHeaX5S&s=1&enc=AZOd1y20GsGnL0v_gYWTrIDCJTY48jbyWj5B_7GB44-LsJGadlpHaIcmAxZ1uaL6qj1dEJ5ixc_BFTASTj74mrfs"}]}},{"name":"Mongolia
-        is changing all its addresses to three-word phrases","message":"A plucky little
-        online startup is changing how we address and locate geographic places. The
-        story below shows how countries and international organizations are adopting
-        this method. Take a look at https:\/\/what3words.com to find your own three
-        words :)","updated_time":"2016-06-26T05:04:58+0000","created_time":"2016-06-15T07:55:13+0000","id":"150352985174571_474135702796296","attachments":{"data":[{"title":"Mongolia
-        is changing all its addresses to three-word phrases","description":"All the
-        mailman will need to find the US embassy in Ulaanbataar are these three words:
-        constants.stuffy.activism.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Fqz.com\u00252F705273\u00252Fmongolia-is-changing-all-its-addresses-to-three-word-phrases\u00252F&h=JAQFMAksP&s=1&enc=AZN02PMmsYT-iK2B1lVh0qeNY7OGxEegLsCoQEytDDBIJgskc9gKuVUVI0SOHPwA5RbLYjALZVY9tHuLS0F0_86P","media":{"image":{"height":720,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBCzb8yBioJKKug&w=720&h=720&url=https\u00253A\u00252F\u00252Fqzprod.files.wordpress.com\u00252F2016\u00252F06\u00252Fjune-13-rtx12cmt-e1465820880769.jpg\u00253Fquality\u00253D80\u002526strip\u00253Dall\u002526w\u00253D1600&cfs=1","width":720}}}]}}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?fields=name,message,updated_time,created_time,attachments\u00257Btitle,description,url,media\u00257D&since=1476952146&access_token=<ACCESS_TOKEN>&limit=25&__paging_token=enc_AdDRT3FRqddWHdExcEnxBuffZCipxhESZBM93TZAL1VTlcfHQr3aWV1rq23kG3uiPxcZCwvQeCiZC8fEJvrhCQFCo6fyMk1u9HaT3EXZBICgj897coSwZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?fields=name,message,updated_time,created_time,attachments\u00257Btitle,description,url,media\u00257D&access_token=<ACCESS_TOKEN>&limit=25&until=1466917498&__paging_token=enc_AdBmZAsUzYqHLvymmCwfLv8K48KqrS6LGOHvgiJYkb7Brd7RrwyTZA8gMCDGPWYdza3XzU34YBZB7Xn0iN7WcT9cLhvOIFzhb8ZCDP8F35OnaNwZBtQZDZD"}}}'
+        Check it out!\n\nhttp:\/\/codecademy.io\/YRFS3047CDf","url":"https:\/\/www.facebook.com\/codecademy\/photos\/a.553205214692855.138303.272256069454439\/1387442691269099\/?type=3","media":{"image":{"height":377,"src":"https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/14264951_1387442691269099_7557697962736020966_n.png?oh=1c67604ccd5679d98c72100f943f3863&oe=5891713F","width":720}}}]}}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?fields=name,message,updated_time,created_time,attachments\u00257Btitle,description,url,media\u00257D&since=1477620579&access_token=<ACCESS_TOKEN>&limit=25&__paging_token=enc_AdAchevYgL0m5xCIn76hqJ3aBASZBLnnBkHzYtokZBey5PDaQuxdVxZBDfJm2ifeekq5qoALQ6ZA4IMrAhmfWQ5dqvhVBMLvnbwrEWU90LoviZCxtZBgZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?fields=name,message,updated_time,created_time,attachments\u00257Btitle,description,url,media\u00257D&access_token=<ACCESS_TOKEN>&limit=25&until=1473732260&__paging_token=enc_AdA5yvCYKggN5gwcOMpKsofaKTcjoBDhX09ctf67EExuFDAc0wxCiNzAyIGndHrMAZCrp9QmVKgQaJrU3U5ORbHEtw7NHfA9kZAKWKz6jUvEBtYAZDZD"}}}'
     http_version: 
-  recorded_at: Wed, 26 Oct 2016 16:55:01 GMT
+  recorded_at: Fri, 04 Nov 2016 05:50:43 GMT
 - request:
     method: get
-    uri: https://graph.facebook.com/1?access_token=<ACCESS_TOKEN_ESCAPED>&fields=id,name,feed%7Bname,message,updated_time,created_time,attachments%7Btitle,description,url,media%7D%7D
+    uri: https://graph.facebook.com/150352985174571_517105121832687?access_token=<ACCESS_TOKEN_ESCAPED>&fields=name,message,updated_time,created_time,attachments%7Btitle,description,url,media%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - '"7a7d3efabfb7deb67979705e1f58992a0d6eb526"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.6
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      X-Fb-Trace-Id:
+      - Hg8s20weOcB
+      X-Fb-Rev:
+      - '2663233'
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - NwGANzCO7IKQk0rTHKBosG9gELd61RUFshBtKny+LQmZ3tnZqypuh6IuS7QbptdUWXzN0aQoMlY9VI7vT8DsUA==
+      Date:
+      - Fri, 04 Nov 2016 05:50:44 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"name":"Guess the Programming Language | Tutorialzine","message":"A
+        little quiz to keep you sharp on programming trends.","updated_time":"2016-10-06T06:51:44+0000","created_time":"2016-10-04T02:21:25+0000","attachments":{"data":[{"title":"Guess
+        the Programming Language | Tutorialzine","description":"Can you tell Java
+        from JavaScript? Awesome! So you are ready to take our ultimate programming
+        challenge.","url":"http:\/\/www.facebook.com\/l.php?u=http\u00253A\u00252F\u00252Ftutorialzine.com\u00252F2014\u00252F06\u00252Fguess-the-programming-language\u00252F&h=JAQGn104n&s=1&enc=AZMOUCd55s0k4Iy0-wG00azSX8txm69C1IRPq_6rHvuoGFU6MAHfvIwUnvg8ER-wPetjaRx55DiCizXn3c-1tnOQ","media":{"image":{"height":490,"src":"https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB9saA-D40lNQqm&w=720&h=720&url=http\u00253A\u00252F\u00252Fcdn.tutorialzine.com\u00252Fwp-content\u00252Fuploads\u00252F2014\u00252F06\u00252Fguess-the-programming-language.jpg&cfs=1","width":490}}}]},"id":"150352985174571_517105121832687"}'
+    http_version: 
+  recorded_at: Fri, 04 Nov 2016 05:50:44 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/_12345?access_token=<ACCESS_TOKEN_ESCAPED>&fields=name,message,updated_time,created_time,attachments%7Btitle,description,url,media%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -447,7 +278,7 @@ http_interactions:
     headers:
       Www-Authenticate:
       - 'OAuth "Facebook Platform" "not_found" "(#803) Some of the aliases you requested
-        do not exist: 1"'
+        do not exist: _12345"'
       Access-Control-Allow-Origin:
       - "*"
       Pragma:
@@ -461,21 +292,21 @@ http_interactions:
       Content-Type:
       - text/javascript; charset=UTF-8
       X-Fb-Trace-Id:
-      - AGqrqQnTSPL
+      - BHQskf8Fa0/
       X-Fb-Rev:
-      - '2652207'
+      - '2663233'
       X-Fb-Debug:
-      - A/XhkwqFNTd7k4IulSk3nhSvx9O8hz+xkGWl1WczfxUq35DFTf1ziedwF0YdlzEB4D/LAnTfOf5/SCIZOe2vVw==
+      - tMdkQneVVQCLcellJCKMlJIweCZ83TdQGL8ATcIqORmCBaB83rz9TuJSwzYmZW2J3TB1nQHwq3LUCBdQHQ1IYw==
       Date:
-      - Sun, 30 Oct 2016 15:57:05 GMT
+      - Fri, 04 Nov 2016 05:50:44 GMT
       Connection:
       - close
       Content-Length:
-      - '142'
+      - '148'
     body:
       encoding: UTF-8
       string: '{"error":{"message":"(#803) Some of the aliases you requested do not
-        exist: 1","type":"OAuthException","code":803,"fbtrace_id":"AGqrqQnTSPL"}}'
+        exist: _12345","type":"OAuthException","code":803,"fbtrace_id":"BHQskf8Fa0\/"}}'
     http_version: 
-  recorded_at: Sun, 30 Oct 2016 15:57:07 GMT
+  recorded_at: Fri, 04 Nov 2016 05:50:44 GMT
 recorded_with: VCR 3.0.3

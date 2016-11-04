@@ -26,3 +26,4 @@ end
 
 RESULT_FILE = "#{FIXTURES_FOLDER}/fb_api_results.yml"
 FB_RESULT = YAML.load(File.read(RESULT_FILE))
+INVALID_RESOURCE_ID = '_12345'

@@ -15,7 +15,7 @@ module FaceGroup
 
     def self.find(id:)
       group_data = FbApi.group_data(id)
-      new(group_data: group_data)
+      group_data.include?('error') ? nil : new(group_data: group_data)
     end
   end
 end
