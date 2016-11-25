@@ -67,6 +67,7 @@ describe 'FaceGroup specifications' do
       retrieved.attachment.wont_be_nil
       retrieved.attachment.description.must_equal attachment['description']
       retrieved.attachment.url.must_match 'tutorialzine'
+      retrieved.attachment.media_url.must_match 'https://'
     end
 
     it '(SAD) should return nil if Posting ID is invalid' do
