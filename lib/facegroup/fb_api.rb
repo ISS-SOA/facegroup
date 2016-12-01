@@ -55,6 +55,14 @@ module FaceGroup
       JSON.load(response.to_s)
     end
 
+    def self.newest_group_postings(group_id)
+      feed_response = HTTP.get(
+        fb_resource_url(group_id) + '/feed',
+        params: { access_token: access_token }
+      )
+      JSON.parse(feed_response)['data']
+    end
+
     private_class_method
 
     def self.fb_resource_url(id)

@@ -309,4 +309,107 @@ http_interactions:
         exist: _12345","type":"OAuthException","code":803,"fbtrace_id":"BHQskf8Fa0\/"}}'
     http_version: 
   recorded_at: Fri, 04 Nov 2016 05:50:44 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/150352985174571/feed?access_token=<ACCESS_TOKEN_ESCAPED>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - graph.facebook.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - '"5222f9aefc2d5317c741589917417d7224505a08"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v2.6
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Content-Type:
+      - text/javascript; charset=UTF-8
+      X-Fb-Trace-Id:
+      - FdQ6Bs4RKK+
+      X-Fb-Rev:
+      - '2711773'
+      Vary:
+      - Accept-Encoding
+      X-Fb-Debug:
+      - DFjTsG+Z6/vy1vEqntYonaM8K+l6Fhl6VxHBgGoPR/LQ/h0ZUS7MXITMBE8wJpufgobiDezynEPd9W3BLJMjGg==
+      Date:
+      - Thu, 01 Dec 2016 04:39:16 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"message":"About the different methodologies for Software
+        Development...","updated_time":"2016-11-30T16:41:03+0000","id":"150352985174571_542660872610445"},{"message":"The
+        posting about netlify got such good feedback, but also some inquiries about
+        the whats\/whys of static site generators.  Here''s an article from a year
+        back describing the sudden growth of SSGs. What''s old is new again.","updated_time":"2016-11-30T01:25:28+0000","id":"150352985174571_542142105995655"},{"message":"If
+        you''ve got statically generated websites (jekyll, hugo, middleman, gulp,
+        etc.), take a look at netlify.com -- I recently switched to using it over
+        Github Pages. It can integrate with any Github repo, run build jobs, deploys
+        in its own CDN, and offers SSL for custom domains using letsencrypt. And its
+        slick as hell! Did I mention open source repos get ''pro'' tier access for
+        free?","updated_time":"2016-11-26T09:05:56+0000","id":"150352985174571_540644899478709"},{"message":"Powershell
+        becomes the official command line of Windows 10!  Goodbye CMD.EXE -- you served
+        me well when i first used a machine.","updated_time":"2016-11-26T03:34:53+0000","id":"150352985174571_539363269606872"},{"message":"Well
+        worth the read.  And important issue for all young developers to keep in mind
+        as they head out to start their careers.","updated_time":"2016-11-21T04:23:37+0000","id":"150352985174571_537053293171203"},{"message":"GitHub
+        language statistics, as expected, JS is the most, Python is the 2nd most popular
+        language!","updated_time":"2016-11-18T01:37:32+0000","id":"150352985174571_537276853148847"},{"message":"Yay,
+        they''re doing it again!","updated_time":"2016-11-17T19:23:18+0000","id":"150352985174571_536826343193898"},{"message":"Traditional
+        CVs & resumes aren''t always the best way to show off what we as developers
+        build. StackOverflow just released ''Developer Story'' -- an online tool for
+        developers to create a storyline based CV of projects, skills, and more. Try
+        making your own storyline to share with others and hunt for jobs!","updated_time":"2016-11-17T01:21:48+0000","id":"150352985174571_536369326572933"},{"message":"Awesome
+        resource for practicing and TEACHING programming. It''s got a bunch of languages
+        to choose from.","updated_time":"2016-11-16T09:45:05+0000","id":"150352985174571_536560309887168"},{"message":"https:\/\/kubernetesbootcamp.github.io\/kubernetes-bootcamp\/index.html","updated_time":"2016-11-15T19:10:52+0000","id":"150352985174571_536400596569806"},{"message":"https:\/\/engineeringblog.yelp.com\/2016\/01\/dumb-init-an-init-for-docker.html","updated_time":"2016-11-10T17:10:40+0000","id":"150352985174571_534225556787310"},{"message":"We''re
+        doing a crazy amount of collaborative coding in our SOA class this semester
+        using #git and #Github. Got to send out thanks to #GithubEducation for supporting
+        education and research by sending us some #GitHubSwag our way! They shipped
+        us stickers, posters, cheat-sheets and their love for our entire class. :)","updated_time":"2016-11-07T19:48:20+0000","id":"150352985174571_532615416948324"},{"message":"Data
+        Source: http:\/\/gs.statcounter.com\/#desktop+mobile+tablet-comparison-ww-monthly-200812-201610","updated_time":"2016-11-06T17:55:21+0000","id":"150352985174571_532352000307999"},{"message":"Hey
+        I am beginner with Web Services development ! I wanted to know , what security
+        measures we can imply on web services ?","updated_time":"2016-11-06T13:06:33+0000","id":"150352985174571_532123483664184"},{"message":"Hello!\n\nI
+        was wondering if anyone here uses or has experience with Polymer? Would love
+        to hear some opinions about it.","updated_time":"2016-11-06T12:58:41+0000","id":"150352985174571_532160360327163"},{"message":"Great
+        tool to practice version control actions: branching, merging, rebase, and
+        more.","updated_time":"2016-11-06T07:48:18+0000","id":"150352985174571_532050607004805"},{"message":"From
+        the article: \"JSON is not a data format you can rely on blindly [...] edge
+        cases and maliciously crafted payloads can cause bugs, crashes and denial
+        of services, mainly because JSON libraries rely on specifications that have
+        evolved over time and that left many details loosely specified or not specified
+        at all.\"  Long story short: it seems XML will never die :D (actually, parsing
+        XML is even worse...)","updated_time":"2016-10-28T02:09:39+0000","id":"150352985174571_527664860776713"},{"message":"Github''s
+        adoption of GraphQL for APIs, over RESTful services, might be the tipping
+        point that makes GraphQL ubiquitous. From what little exposure I have to it
+        (thanks to YenTing and Yen-Nan at Cardinal Blue), it seems we are taking the
+        complexity and burden of APIs away from API consumers, and putting it squarely
+        at the feet of API providers. That means using APIs is about to become significantly
+        easier (albeit more deeply nested) for everyone!  But it also means that creating
+        APIs is about to become significantly harder. Read more about the big shift
+        at Github.","updated_time":"2016-10-20T08:29:06+0000","id":"150352985174571_524070464469486"},{"message":"https:\/\/m.facebook.com\/story.php?story_fbid=1098448240203391&id=100001146751327","updated_time":"2016-10-13T18:17:23+0000","id":"150352985174571_521137638096102"},{"updated_time":"2016-10-06T08:39:47+0000","id":"150352985174571_518029841740215"},{"message":"A
+        little quiz to keep you sharp on programming trends.","updated_time":"2016-10-06T06:51:44+0000","id":"150352985174571_517105121832687"},{"updated_time":"2016-10-06T01:18:12+0000","id":"150352985174571_517701838439682"},{"message":"Up
+        and coming languages worth keeping our eyes on.  I''m already a huge fan of
+        Crystal and Rust, but the author has convinced me to pay more attention to
+        Kotlin and Elm.","updated_time":"2016-09-22T08:12:35+0000","id":"150352985174571_511894255687107"},{"message":"I
+        can''t even wrap my head around all the new features Github just released:
+        code reviews, kanban boards, and much more.","updated_time":"2016-09-19T09:14:51+0000","id":"150352985174571_509461352597064"},{"message":"http:\/\/vertx.io\/","updated_time":"2016-09-13T20:34:39+0000","id":"150352985174571_508953969314469"}],"paging":{"previous":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?icon_size=16&since=1480524063&access_token=<ACCESS_TOKEN>&limit=25&__paging_token=enc_AdD28PxnSul8946PmUcvh0fH8ihXcvUXNKxcxZAicawXTTHNirHz8oWDOfJGxYTNE3XT7desrEmqC7bsBFbTpVoJGfjJcyNRCv2vcn8HLZCS4cBAZDZD&__previous=1","next":"https:\/\/graph.facebook.com\/v2.6\/150352985174571\/feed?icon_size=16&access_token=<ACCESS_TOKEN>&limit=25&until=1473798879&__paging_token=enc_AdAqfNQpnjF9gW798CPwhyX1P292NEstwYlz5ZCTHjrqSk5I6kNmTIFKNiz6ZABsSMy7XZAj4950Goaw3DRyRbLascTi1B1DLjq2wKgtgGRUZB3FrAZDZD"}}'
+    http_version: 
+  recorded_at: Thu, 01 Dec 2016 04:39:16 GMT
 recorded_with: VCR 3.0.3
