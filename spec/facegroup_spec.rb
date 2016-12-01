@@ -56,10 +56,9 @@ describe 'FaceGroup specifications' do
 
     describe 'Checking Latest Postings on Group Feed' do
       it '(HAPPY) should get only the latest postings time from a group feed' do
-        group = FaceGroup::Group.find(id: ENV['FB_GROUP_ID'])
-        latest_postings = group.latest_postings
-        latest_postings.count.must_be :>=, 10
-        latest_postings.count.must_be :<=, 25
+        latest = FaceGroup::Group.latest_postings(id: ENV['FB_GROUP_ID'])
+        latest.count.must_be :>=, 10
+        latest.count.must_be :<=, 25
       end
     end
   end
