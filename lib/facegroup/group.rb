@@ -18,9 +18,8 @@ module FaceGroup
       group_data.include?('error') ? nil : new(group_data: group_data)
     end
 
-    def latest_posting_time
-      latest_postings = FbApi.newest_group_postings(id)
-      Time.parse(latest_postings.first['updated_time'])
+    def latest_postings
+      FbApi.newest_group_postings(id)
     end
   end
 end
